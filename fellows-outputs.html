@@ -35,9 +35,14 @@
         <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg" alt="" style="width:30px;height:25px;display:block;">
         <span style="color:#ffffff;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;">The University of Chicago</span>
       </a>
-      <button type="button" aria-label="Search uchicago.edu" style="background:none;border:none;padding:4px;cursor:pointer;display:flex;align-items:center;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </button>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" style="display:flex;align-items:center;gap:6px;margin:0;">
+        <input id="site-search-q" name="q" type="search" placeholder="Search" aria-label="Search this site" required style="width:130px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,0.6);color:#ffffff;font:inherit;font-size:0.8rem;padding:4px 2px;">
+        <!-- Scopes results to the live domain. Update if the site moves off xrisk.uchicago.edu. -->
+        <input type="hidden" name="as_sitesearch" value="xrisk.uchicago.edu">
+        <button type="submit" aria-label="Search" style="background:none;border:none;padding:4px;cursor:pointer;display:flex;align-items:center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </form>
     </div>
   </div>
   <div style="background:#ffffff;width:100%;padding:24px 0;">
@@ -63,8 +68,8 @@
           <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#800000;white-space:nowrap;font-weight:700;">Past Fellows' Work</a>
         </div>
       </div>
-      <a href="https://nobelassembly.org/" target="_blank" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
-      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
     </div>
   </nav>
   <main id="main-content">
@@ -100,7 +105,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://www.lesswrong.com/posts/XC28DmEYPLqfwc8tf/we-need-a-better-way-to-evaluate-emergent-misalignment" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">We Need a Better Way to Evaluate Emergent Misalignment</a>
+          <a href="https://www.lesswrong.com/posts/XC28DmEYPLqfwc8tf/we-need-a-better-way-to-evaluate-emergent-misalignment" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">We Need a Better Way to Evaluate Emergent Misalignment</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -116,7 +121,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Will_Anderson.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Diffuse Attacks on Multiagent Systems</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Will_Anderson.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Diffuse Attacks on Multiagent Systems</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -132,7 +137,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jo_Jiao.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Narrow RL Induces Broad Behavior Changes in LLMs</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jo_Jiao.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Narrow RL Induces Broad Behavior Changes in LLMs</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -148,7 +153,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Daniel_Allen.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Rethinking Biological Weapon Deterrence in the 21st Century</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Daniel_Allen.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Rethinking Biological Weapon Deterrence in the 21st Century</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -164,7 +169,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Samara_Shaz.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Regime Change and Credibility: Implications of Democratic Backsliding on Deterrence</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Samara_Shaz.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Regime Change and Credibility: Implications of Democratic Backsliding on Deterrence</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -180,7 +185,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Olivia_Long.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">The AI in the Mirror: LLM Self-Recognition in an Iterated Public Goods Game</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Olivia_Long.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">The AI in the Mirror: LLM Self-Recognition in an Iterated Public Goods Game</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -196,7 +201,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/eliciting_situational_awareness_new_sharing/" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Eliciting Situational Awareness in Large Language Models Through Fine-Tuning</a>
+          <a href="https://xrisk.uchicago.edu/eliciting_situational_awareness_new_sharing/" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Eliciting Situational Awareness in Large Language Models Through Fine-Tuning</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -212,7 +217,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Edmund_Bu.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Interpreting ResNet-based CLIP via Neuron-Attention Decomposition</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Edmund_Bu.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Interpreting ResNet-based CLIP via Neuron-Attention Decomposition</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -228,7 +233,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Yilin_Huang.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Position: Why AI R&D Benchmarks Need to Measure Research Judgement Separately</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Yilin_Huang.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Position: Why AI R&D Benchmarks Need to Measure Research Judgement Separately</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -244,7 +249,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jay_Kim.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Rethinking Priorities for Frontier AI Security</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jay_Kim.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Rethinking Priorities for Frontier AI Security</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -260,7 +265,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Aditya_Singh.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Lessons from Studying Model Organisms of Hidden Behavior</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Aditya_Singh.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Lessons from Studying Model Organisms of Hidden Behavior</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -276,7 +281,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Yerin_Yoon.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Alignment as Deterrence: The U.S.-ROK Policy Alignment and North Korea's Provocations (1993-2023)</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Yerin_Yoon.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Alignment as Deterrence: The U.S.-ROK Policy Alignment and North Korea's Provocations (1993-2023)</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2025">
@@ -292,7 +297,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jacopo_Minniti.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Uncertainty Aware Tree Search: Using LLM Internals to Allocate Exploration Budget</a>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jacopo_Minniti.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Uncertainty Aware Tree Search: Using LLM Internals to Allocate Exploration Budget</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -308,7 +313,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Weckwerth_Audrey.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Strait to Catastrophe: Perceptual Factors in US-China-Taiwan Defense Posture and Nuclear Escalation</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Weckwerth_Audrey.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Strait to Catastrophe: Perceptual Factors in US-China-Taiwan Defense Posture and Nuclear Escalation</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -324,7 +329,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Anowara_Amina.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Integration of Remote Floating Gate FET-based Biosensor with Millifluidic Systems for Point-of-Care Diagnostics</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Anowara_Amina.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Integration of Remote Floating Gate FET-based Biosensor with Millifluidic Systems for Point-of-Care Diagnostics</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -340,7 +345,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://arxiv.org/abs/2410.13204" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Response Inconsistency of Large Language Models in High-Stakes Military Decision Making</a>
+          <a href="https://arxiv.org/abs/2410.13204" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Response Inconsistency of Large Language Models in High-Stakes Military Decision Making</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -356,7 +361,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Kanuparthi_Rhea.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Nukes and Ladders: India and Pakistan's Nuclear Evolution</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Kanuparthi_Rhea.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Nukes and Ladders: India and Pakistan's Nuclear Evolution</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -372,7 +377,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Siskel_Simon.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Deterrence and Deescalation: U.S. Strategies for a Nuclear-Capable Iran</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Siskel_Simon.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Deterrence and Deescalation: U.S. Strategies for a Nuclear-Capable Iran</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -388,7 +393,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Wei_Anastasia.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Locating Semantic Understanding: Semantically Similar Sentences in Large Language Models</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Wei_Anastasia.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Locating Semantic Understanding: Semantically Similar Sentences in Large Language Models</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -404,7 +409,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/eliciting_situational_awareness_new_sharing/" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Eliciting Situational Awareness in Large Language Models Through Fine-Tuning</a>
+          <a href="https://xrisk.uchicago.edu/eliciting_situational_awareness_new_sharing/" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Eliciting Situational Awareness in Large Language Models Through Fine-Tuning</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -436,7 +441,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/Tripolarity-Resolve-and-Nuclear-Risks.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Tripolarity, Resolve, and Nuclear Risks</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/Tripolarity-Resolve-and-Nuclear-Risks.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Tripolarity, Resolve, and Nuclear Risks</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -452,7 +457,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Cavalet_Lavinia.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">To Arm or Not to Arm: an Arctic Dilemma</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Cavalet_Lavinia.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">To Arm or Not to Arm: an Arctic Dilemma</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -468,7 +473,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Rosenberger_James.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Measuring Community Significance and State Vulnerability After Nuclear Winter</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Rosenberger_James.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Measuring Community Significance and State Vulnerability After Nuclear Winter</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -484,7 +489,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Tran_Helena.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Situational Awareness and Consistency in Language Model Deception: a Simulated AI Company Assistant</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Tran_Helena.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Situational Awareness and Consistency in Language Model Deception: a Simulated AI Company Assistant</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -500,7 +505,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Shin_Robert.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Investigating Fourier Representations and Learned Algorithms within Grokked Transformers</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Shin_Robert.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Investigating Fourier Representations and Learned Algorithms within Grokked Transformers</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -532,7 +537,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Katoch_Abhay.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Modeling the Optimal Distribution of Wastewater-Based Surveillance Techniques</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Katoch_Abhay.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Modeling the Optimal Distribution of Wastewater-Based Surveillance Techniques</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -548,7 +553,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SFR24_FINAl_Jibang.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Grounded Persuasive Language Generation for Automated Marketing</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SFR24_FINAl_Jibang.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Grounded Persuasive Language Generation for Automated Marketing</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -564,7 +569,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Coffey_Austin.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Managing Conflict in the South China Sea</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Coffey_Austin.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Managing Conflict in the South China Sea</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2024">
@@ -580,7 +585,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2025/01/Benchek_SRF24_Final_Paper.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Large Language Models Exhibit Cognitive Biases in Interactive Stock Trading Scenarios</a>
+          <a href="https://xrisk.uchicago.edu/files/2025/01/Benchek_SRF24_Final_Paper.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Large Language Models Exhibit Cognitive Biases in Interactive Stock Trading Scenarios</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -596,7 +601,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALHuangXLabSRF23-OpenSourceLLMsTrends-e3518fe16ccd86b8.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Open-source Language Models: Identifying Contributing Factors and Future Trends</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALHuangXLabSRF23-OpenSourceLLMsTrends-e3518fe16ccd86b8.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Open-source Language Models: Identifying Contributing Factors and Future Trends</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -612,7 +617,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/HishamXLabSRF23-ClimateRiskPakistan-bff5d26551c1e5b9.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Status of Adaptation to Climate Risk in Pakistan</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/HishamXLabSRF23-ClimateRiskPakistan-bff5d26551c1e5b9.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Status of Adaptation to Climate Risk in Pakistan</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -628,7 +633,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/TeplicaXLabSRF23-MechInterpDistilGPT2-2a75a059d1e8720b.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A Mechanistic Analysis of Counting in Distil-GPT2</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/TeplicaXLabSRF23-MechInterpDistilGPT2-2a75a059d1e8720b.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A Mechanistic Analysis of Counting in Distil-GPT2</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -660,7 +665,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALNguyenXLabSRF23-NuclearWinterSootInjection-f3de9649e7180d70.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Examining Temperature Fluctuations and Soot Deposition in Nuclear Winter</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALNguyenXLabSRF23-NuclearWinterSootInjection-f3de9649e7180d70.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Examining Temperature Fluctuations and Soot Deposition in Nuclear Winter</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -692,7 +697,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/Joshua-2024-Paper-57145faf92bd2ca2.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Optimizing 3' UTR Sequences and Secondary Structures to Improve mRNA Vaccine Thermostability</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/Joshua-2024-Paper-57145faf92bd2ca2.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Optimizing 3' UTR Sequences and Secondary Structures to Improve mRNA Vaccine Thermostability</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -708,7 +713,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALBaldwinXLabSRF23-LimitsOfOthelloGPTsEmergentRepresentation-204d4ed6c6475eac.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Exploring the Limits of OthelloGPT's Emergent Representations</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALBaldwinXLabSRF23-LimitsOfOthelloGPTsEmergentRepresentation-204d4ed6c6475eac.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Exploring the Limits of OthelloGPT's Emergent Representations</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -740,7 +745,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://arxiv.org/abs/2312.08793" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Forbidden Facts: An Investigation of Competing Objectives in Llama-2</a>
+          <a href="https://arxiv.org/abs/2312.08793" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Forbidden Facts: An Investigation of Competing Objectives in Llama-2</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -772,7 +777,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALVickersXLabSRF23-TacticalNuclearWeaponsUaRu-d3174974a3d09185.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Risk Assessment of Russian Use of Tactical Nuclear Weapons</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALVickersXLabSRF23-TacticalNuclearWeaponsUaRu-d3174974a3d09185.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Risk Assessment of Russian Use of Tactical Nuclear Weapons</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -788,7 +793,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Group Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALWangJiWangXLabSRF23-AIReflectionAgentPolicyDeliberation-1608fcce214321a8.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Building an AI Reflection Agent for Policy Deliberation</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALWangJiWangXLabSRF23-AIReflectionAgentPolicyDeliberation-1608fcce214321a8.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Building an AI Reflection Agent for Policy Deliberation</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -804,7 +809,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALLlerenaXLabSRF23-GlobalGovernanceOfHighRiskAI-0334e1dd25e37cae.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Global Governance of High-Risk Artificial Intelligence</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALLlerenaXLabSRF23-GlobalGovernanceOfHighRiskAI-0334e1dd25e37cae.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Global Governance of High-Risk Artificial Intelligence</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -820,7 +825,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALLiXLabSRF23-UnitTestingQuixbugs-d1a44105cfa242ca.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Prompting Code Interpreter to Write Better Unit Tests on Quixbugs Functions</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALLiXLabSRF23-UnitTestingQuixbugs-d1a44105cfa242ca.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Prompting Code Interpreter to Write Better Unit Tests on Quixbugs Functions</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2023">
@@ -836,7 +841,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Group Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALWangJiWangXLabSRF23-AIReflectionAgentPolicyDeliberation-1608fcce214321a8.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Building an AI Reflection Agent for Policy Deliberation</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALWangJiWangXLabSRF23-AIReflectionAgentPolicyDeliberation-1608fcce214321a8.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Building an AI Reflection Agent for Policy Deliberation</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2022">
@@ -852,7 +857,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/DelRivoXLabSRF22-WillAGILearnAlienConcepts-75d1dfa546ef02ab.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Will AGI Learn Alien Concepts?</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/DelRivoXLabSRF22-WillAGILearnAlienConcepts-75d1dfa546ef02ab.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Will AGI Learn Alien Concepts?</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2022">
@@ -868,7 +873,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/DunnXLabSRF22-ImprovingHumanEvaluationOfFactualAccuracyLLMs-c8c1fa49608848be.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Improving Evaluation of Factual Accuracy in Language Models</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/DunnXLabSRF22-ImprovingHumanEvaluationOfFactualAccuracyLLMs-c8c1fa49608848be.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Improving Evaluation of Factual Accuracy in Language Models</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2022">
@@ -884,7 +889,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/HarrisXLabSRF22-CooperativeAIPrimer-3ab448da41f42fd7.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Cooperative AI: A Primer</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/HarrisXLabSRF22-CooperativeAIPrimer-3ab448da41f42fd7.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Cooperative AI: A Primer</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2022">
@@ -916,7 +921,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/JosephsonXLabSRF22-CaliforniaEffectAI-fa2b6d382dfdd902.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A California Effect for Artificial Intelligence</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/JosephsonXLabSRF22-CaliforniaEffectAI-fa2b6d382dfdd902.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A California Effect for Artificial Intelligence</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2022">
@@ -932,7 +937,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/KoXLabSRF22-InterpretingBlackboxGraphNeuralNetworkThroughNodeMasking-85e7226e8274b438.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Assessing Fairness of a Blackbox Graph Neural Network Model Through Node Masking</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/KoXLabSRF22-InterpretingBlackboxGraphNeuralNetworkThroughNodeMasking-85e7226e8274b438.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Assessing Fairness of a Blackbox Graph Neural Network Model Through Node Masking</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2022">
@@ -980,7 +985,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/YangAXLabSRF22-KnowledgeGraphsForLLMEvals-17939c6974e12928.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Knowledge Graphs for Language Model Evaluation</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/YangAXLabSRF22-KnowledgeGraphsForLLMEvals-17939c6974e12928.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Knowledge Graphs for Language Model Evaluation</a>
         </div>
       </div>
       <div class="fellow-card visible" data-year="2022">
@@ -996,7 +1001,7 @@
         </div>
         <div style="padding:12px 2px 0;">
           <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
-          <a href="https://xrisk.uchicago.edu/files/2024/02/YangXLabSRF22-MultitaskLearningAIXRisk-2e6e85f550820385.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A Random Thought on Multi-task Learning and AI Existential Risks</a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/YangXLabSRF22-MultitaskLearningAIXRisk-2e6e85f550820385.pdf" target="_blank" rel="noopener" style="color:#800000;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A Random Thought on Multi-task Learning and AI Existential Risks</a>
         </div>
       </div>
     </div>
@@ -1017,8 +1022,8 @@
         <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
           <div style="font-size:12px;color:#ffffff;opacity:0.8;">XLab · Existential Risk Laboratory</div>
           <div style="display:flex;gap:20px;">
-            <a href="https://accessibility.uchicago.edu/" target="_blank" class="footer-link">Accessibility</a>
-            <a href="https://privacy.uchicago.edu/privacy-policy/" target="_blank" class="footer-link">Privacy Policy</a>
+            <a href="https://accessibility.uchicago.edu/" target="_blank" rel="noopener" class="footer-link">Accessibility</a>
+            <a href="https://privacy.uchicago.edu/privacy-policy/" target="_blank" rel="noopener" class="footer-link">Privacy Policy</a>
             <a href="mailto:xlab-info@uchicago.edu" class="footer-link">Contact</a>
           </div>
           <div style="font-size:10px;color:#ffffff;opacity:0.8;">© University of Chicago · All Rights Reserved</div>

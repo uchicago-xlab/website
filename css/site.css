@@ -93,7 +93,7 @@ img, video { max-width: 100%; }
    ========================================================================== */
 @media (max-width: 640px) {
   /* --- Header --- */
-  .site-logo img { height: 44px !important; }
+  .site-logo img { height: 50px !important; }
   .topbar { padding-left: 16px !important; padding-right: 16px !important; }
   .topbar span { font-size: 11px; }
   .nav-toggle { padding-left: 16px; padding-right: 16px; }
@@ -146,4 +146,11 @@ img, video { max-width: 100%; }
   footer [style*="align-items:flex-end"] { align-items: flex-start !important; }
   footer img { width: 200px !important; }
   footer [style*="padding:60px 24px"] { padding: 40px 20px !important; }
+}
+
+/* ----- Brand-bar site search ----- */
+.site-search input::placeholder { color: #ffffff; opacity: 0.8; }
+.site-search input:focus { outline: 2px solid #ffffff; outline-offset: 2px; }
+@media (max-width: 640px) {
+  .site-search input { width: 96px !important; }
 }
