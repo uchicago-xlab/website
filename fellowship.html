@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Summer Research Fellowship — XLab</title>
+<meta name="description" content="XLab's 10-week Summer Research Fellowship for undergraduates and early-career researchers in AI safety and nuclear security.">
+<link href="https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/UChicagoSansSerif.css" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #ffffff; font-family: 'UChicago Sans Serif', Helvetica, Arial, sans-serif; color: #000000; }
+  a { color: #800000; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ::selection { background: #800000; color: #ffffff; }
+  @font-face { font-family:'XOX Stencil'; src:url('brand/fonts/XOX-Stencil-v2.otf') format('opentype'); font-display:swap; }
+  @keyframes heroZoom { 0% { transform: scale(1); } 100% { transform: scale(1.09); } }
+  [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  [data-reveal].revealed { opacity: 1; transform: translateY(0); }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown .dropdown-menu { opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
+  .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu { opacity: 1; pointer-events: auto; }
+  .dropdown-menu a:hover { background: #F5F5F5; text-decoration: none; }
+  .footer-link { font-size: 11px; color: #ffffff; opacity: 0.8; text-decoration: underline dotted; }
+  .footer-link:hover { opacity: 1; text-decoration: underline solid; }
+  .skip-link:focus { left: 16px !important; top: 16px !important; }
+</style>
+</head>
+<body>
+<div style="background:#ffffff;color:#000000;min-height:100vh;">
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a><div id="scrollbar" style="position:fixed;top:0;left:0;height:3px;background:#800000;z-index:200;width:0%;"></div>
+  <div style="background:#800000;width:100%;">
+    <div style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
+      <a href="https://www.uchicago.edu" style="display:flex;align-items:center;gap:10px;" aria-label="The University of Chicago">
+        <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg" alt="" style="width:30px;height:25px;display:block;">
+        <span style="color:#ffffff;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;">The University of Chicago</span>
+      </a>
+      <button type="button" aria-label="Search uchicago.edu" style="background:none;border:none;padding:4px;cursor:pointer;display:flex;align-items:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div style="background:#ffffff;width:100%;padding:24px 0;">
+    <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
+      <a href="index.html" style="display:block;">
+        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
+      </a>
+    </div>
+  </div>
+  <nav style="background:#ffffff;width:100%;border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;position:sticky;top:0;z-index:50;">
+    <div style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
+      <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
+      <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">ABOUT</a>
+      <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">RISK AREAS</a>
+      <div class="nav-dropdown">
+        <a href="fellowship.html" tabindex="0" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#800000;border-bottom:2px solid #800000;padding-bottom:4px;font-weight:700;white-space:nowrap;display:inline-block;">FELLOWSHIP</a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:210px;padding:6px;z-index:60;">
+          <a href="fellowship.html" style="display:block;padding:11px 14px;font-size:13px;color:#800000;white-space:nowrap;font-weight:700;">Program Overview</a>
+          <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Past Fellows' Work</a>
+        </div>
+      </div>
+      <a href="https://nobelassembly.org/" target="_blank" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+    </div>
+  </nav>
+  <main id="main-content">
+  <section style="position:relative;min-height:500px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:#404040;">
+    <div style="position:absolute;inset:0;overflow:hidden;">
+      <div style="position:absolute;inset:-4%;animation:heroZoom 22s ease-in-out infinite alternate;">
+        <img src="images/students-swing.webp" alt="Students relaxing on campus under trees" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);">
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.84) 100%);"></div>
+    </div>
+    <img src="brand/xlab-logo-header-mark.png" alt="" style="position:absolute;top:28px;right:40px;width:60px;opacity:0.55;">
+    <div style="position:relative;padding:130px 48px 60px;max-width:1180px;margin:0 auto;width:100%;box-sizing:border-box;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;">
+        <div>
+          <div style="font-size:12px;letter-spacing:0.24em;color:#ffffff;font-weight:600;margin-bottom:32px;">SUMMER RESEARCH FELLOWSHIP 2026</div>
+          <h1 style="font-family:'XOX Stencil',serif;font-weight:400;font-size:clamp(38px,5.5vw,64px);line-height:1.08;letter-spacing:-0.01em;margin:0;max-width:800px;color:#ffffff;text-transform:uppercase;">Ten weeks. Your research question. Your call.</h1>
+        </div>
+        <a href="https://coda.io/form/XLab-SRF-26-Application-Form_d533iNrB2Rn" target="_blank" style="flex-shrink:0;font-size:13px;letter-spacing:0.08em;color:#ffffff;background:#800000;padding:16px 34px;white-space:nowrap;">APPLY HERE →</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:28px;">
+        <div style="width:38px;height:1px;background:#ffffff;flex-shrink:0;"></div>
+        <p style="font-size:13px;color:#D9D9D9;margin:0;">Applications due March 15, 11:59pm (your timezone) · form remains open until March 18 · program runs June 15 – August 22, in-person on campus.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:88px 48px;max-width:1180px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+      <div style="display:flex;gap:28px;">
+        <div style="width:3px;flex-shrink:0;background:#800000;"></div>
+        <div>
+          <div style="font-size:15px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:20px;">THE PROGRAM</div>
+          <p style="font-size:16.5px;line-height:1.7;color:#4D4D4D;margin:0 0 20px;">A 10-week, in-person research program for students and early-career researchers working on AI safety and security, nuclear security, or the confluence of these issues. Unlike more established fields, <span style="color:#000000;font-weight:700;">the field of AI safety and security has not yet reached a consensus on what the foundational problems are</span> — dedicated junior researchers can reach the intellectual frontier with just months of focused work.</p>
+          <p style="font-size:16.5px;line-height:1.7;color:#4D4D4D;margin:0;">Each fellow scopes their own research question, justifies its importance, identifies appropriate methods, and delivers a significant written product — advised by a domain expert mentor, but with the intellectual direction entirely their own. This is not a research assistantship; it is practice for leading your own research program.</p>
+        </div>
+      </div>
+      <div>
+        <img src="uploads/IMG_6971-22e1944b.jpg" alt="Fellows on a summer outing on the Chicago river" style="width:100%;height:320px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);">
+        <div style="font-size:12.5px;color:#737373;margin-top:12px;">Fellows and staff on a cohort outing along the Chicago river, Summer 2026.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="background: #F5F1EC; padding: 88px 48px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:12px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:14px;">WHAT YOU GET</div>
+          <h2 style="font-size:30px;font-weight:700;margin:0;color:#000000;">Program Details</h2>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#D9D9D9;border:1px solid #D9D9D9;">
+          <div style="padding: 34px 30px; display: flex; flex-direction: column; background-color: #FFFFFF">
+            <h3 style="font-size:16px;font-weight:700;margin:0 0 12px;color:#000000;letter-spacing:0.02em;">STIPEND</h3>
+            <p style="font-size:14.5px;line-height:1.6;color:#4D4D4D;margin:0;flex:1;">$10,000 stipend, UChicago dorm housing, full dining hall meal plan, and funds for weekday lunches.</p>
+            <p style="font-size:12.5px;line-height:1.55;color:#737373;margin:14px 0 0;">Disbursed in two installments, not contingent on any specific research output.</p>
+          </div>
+          <div style="padding: 34px 30px; display: flex; flex-direction: column; background-color: #FFFFFF">
+            <h3 style="font-size:16px;font-weight:700;margin:0 0 12px;color:#000000;letter-spacing:0.02em;">COMPUTE</h3>
+            <p style="font-size:14.5px;line-height:1.6;color:#4D4D4D;margin:0;flex:1;">Technical fellows receive $4,000 in compute and API credit support.</p>
+            <p style="font-size:12.5px;line-height:1.55;color:#737373;margin:14px 0 0;">Usable across major cloud and API providers, based on your methodology.</p>
+          </div>
+          <div style="padding: 34px 30px; display: flex; flex-direction: column; background-color: #FFFFFF">
+            <h3 style="font-size:16px;font-weight:700;margin:0 0 12px;color:#000000;letter-spacing:0.02em;">MENTORSHIP</h3>
+            <p style="font-size:14.5px;line-height:1.6;color:#4D4D4D;margin:0;flex:1;">Regular one-on-one check-ins with a research manager and a domain-expert advisor throughout the program.</p>
+            <p style="font-size:12.5px;line-height:1.55;color:#737373;margin:14px 0 0;">Mentors drawn from XLab staff, UChicago faculty, and outside researchers.</p>
+          </div>
+          <div style="padding: 34px 30px; display: flex; flex-direction: column; background-color: #FFFFFF">
+            <h3 style="font-size:16px;font-weight:700;margin:0 0 12px;color:#000000;letter-spacing:0.02em;">WORKSPACE</h3>
+            <p style="font-size:14.5px;line-height:1.6;color:#4D4D4D;margin:0;flex:1;">Dedicated coworking space on the University of Chicago campus.</p>
+            <p style="font-size:12.5px;line-height:1.55;color:#737373;margin:14px 0 0;">24/7 badge access alongside the rest of the cohort for the full 10 weeks.</p>
+          </div>
+          <div style="padding: 34px 30px; display: flex; flex-direction: column; background-color: #FFFFFF">
+            <h3 style="font-size:16px;font-weight:700;margin:0 0 12px;color:#000000;letter-spacing:0.02em;">PROGRAMMING</h3>
+            <p style="font-size:14.5px;line-height:1.6;color:#4D4D4D;margin:0;flex:1;">Workshops on forecasting, open-source intelligence, and research methodology, plus Q&A with policy practitioners.</p>
+            <p style="font-size:12.5px;line-height:1.55;color:#737373;margin:14px 0 0;">Past sessions: RAND, the Federation of American Scientists, the Bulletin of the Atomic Scientists.</p>
+          </div>
+          <div style="padding: 34px 30px; display: flex; flex-direction: column; background-color: #FFFFFF">
+            <h3 style="font-size:16px;font-weight:700;margin:0 0 12px;color:#000000;letter-spacing:0.02em;">COMMUNITY</h3>
+            <p style="font-size:14.5px;line-height:1.6;color:#4D4D4D;margin:0;flex:1;">A cohort of 15–20 peers working on related problems, with social events and shared living spaces.</p>
+            <p style="font-size:12.5px;line-height:1.55;color:#737373;margin:14px 0 0;">A shared dorm floor and a cohort Slack that stays active long after the program ends.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="padding:88px 48px;max-width:1180px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;">
+      <div>
+        <img src="images/campus-buildings.jpg" alt="Fellows visiting the Doomsday Clock" style="width:100%;height:340px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);">
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:16px;">WHAT YOU'LL WORK ON</div>
+        <h2 style="font-size:30px;font-weight:700;margin:0 0 20px;color:#000000;">Research Areas</h2>
+        <p style="font-size:16px;line-height:1.7;color:#4D4D4D;margin:0 0 18px;">Our program focuses on AI strategy, security, and governance, and nuclear weapon security. But we see these areas not as separate issues to be siloed, but facets of the same problem — a single research question can cascade across domains.</p>
+        <p style="font-size:16px;line-height:1.7;color:#4D4D4D;margin:0 0 18px;">The satellite imagery techniques that track compute buildups for AI governance also inform long-standing questions about arsenal survivability. As AI intensifies great-power competition, nuclear-armed states may face use-it-or-lose-it pressures if they believe AI-enabled technology will render their arsenals vulnerable.</p>
+        <p style="font-size:14.5px;line-height:1.7;color:#737373;margin:0;">We especially encourage proposals using open-source intelligence, forecasting, strategic net assessment, or scenario analysis — though we're just as excited to review technical governance, AI security, and applied AI research.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="padding:80px 48px;max-width:1180px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;">
+      <div>
+        <h2 style="font-size:30px;font-weight:700;margin:0 0 18px;color:#000000;">Who Should Apply</h2>
+        <ul style="font-size:15px;line-height:1.8;color:#4D4D4D;margin:0 0 20px;padding-left:20px;">
+          <li>Demonstrated commitment to a career in AI safety, security and governance, or nuclear security</li>
+          <li>Substantive familiarity with the field and its open questions</li>
+          <li>Shown ability to work and think independently</li>
+        </ul>
+        <p style="font-size:14.5px;line-height:1.7;color:#4D4D4D;margin:0 0 14px;">No technical background is required, but fellows pursuing technical projects are expected to have completed <a href="https://learn.arena.education/" target="_blank" style="text-decoration:underline;">ARENA</a> or similar material. If you're on the fence, we encourage you to apply.</p>
+        <p style="font-size:12.5px;line-height:1.6;color:#737373;margin:0;">We are only able to accept fellows with US work authorization — US citizens, permanent residents, or international students currently on a valid F-1 visa. We are unable to sponsor visas.</p>
+      </div>
+      <div>
+        <img src="images/group-photo.jpg" alt="XLab summer research fellows and staff posing together outdoors on campus" style="width:100%;height:340px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);">
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="background:#404040;padding:88px 48px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;align-items:center;gap:24px;margin-bottom:16px;flex-wrap:wrap;">
+        <div style="font-size: 72px; font-weight: 700; color: #ffffff; line-height: 1; font-family: 'XOX Stencil',serif; width: 134px; text-align: center;">60</div>
+        <p style="font-size: 16px; line-height: 1.6; color: #D9D9D9; margin: 0; max-width: 640px;">alumni since 2022, now at OpenAI, RAND, Google DeepMind, MATS, SecureBio, the Federation of American Scientists, the Institute for Progress, MILA, the intelligence community, congressional offices, and leading PhD programs.</p>
+      </div>
+      <h3 style="font-size:14px;letter-spacing:0.14em;font-weight:700;margin:56px 0 24px;color:#ffffff;border-top:1px solid #5C5C5C;padding-top:32px;">SELECTED OUTPUTS</h3>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+          <a href="https://arxiv.org/abs/2410.13204" target="_blank" style="display:block;background:#4D4D4D;padding:20px 22px;border-left:3px solid #800000;">
+            <div style="font-size:14.5px;line-height:1.5;color:#ffffff;margin-bottom:8px;">Response Inconsistency of LLMs in High-Stakes Military Decision Making</div>
+            <div style="font-size:12px;letter-spacing:0.04em;color:#D9D9D9;text-decoration:underline;">READ PAPER →</div>
+          </a>
+          <a href="https://arxiv.org/abs/2408.06210" target="_blank" style="display:block;background:#4D4D4D;padding:20px 22px;border-left:3px solid #800000;">
+            <div style="font-size:14.5px;line-height:1.5;color:#ffffff;margin-bottom:8px;">Certified Safe: A Schematic for Approval Regulation of Frontier AI</div>
+            <div style="font-size:12px;letter-spacing:0.04em;color:#D9D9D9;text-decoration:underline;">READ PAPER →</div>
+          </a>
+          <a href="https://xrisk.uchicago.edu/files/2026/03/Rethinking-Priorities-for-Frontier-AI-Security.pdf" target="_blank" style="display:block;background:#4D4D4D;padding:20px 22px;border-left:3px solid #800000;">
+            <div style="font-size:14.5px;line-height:1.5;color:#ffffff;margin-bottom:8px;">Rethinking Priorities for Frontier AI Security</div>
+            <div style="font-size:12px;letter-spacing:0.04em;color:#D9D9D9;text-decoration:underline;">READ PAPER →</div>
+          </a>
+          <a href="https://arxiv.org/abs/2312.08793" target="_blank" style="display:block;background:#4D4D4D;padding:20px 22px;border-left:3px solid #800000;">
+            <div style="font-size:14.5px;line-height:1.5;color:#ffffff;margin-bottom:8px;">Forbidden Facts: Competing Objectives in Llama-2</div>
+            <div style="font-size:12px;letter-spacing:0.04em;color:#D9D9D9;text-decoration:underline;">READ PAPER →</div>
+          </a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALLlerenaXLabSRF23-GlobalGovernanceOfHighRiskAI-0334e1dd25e37cae.pdf" target="_blank" style="display:block;background:#4D4D4D;padding:20px 22px;border-left:3px solid #800000;">
+            <div style="font-size:14.5px;line-height:1.5;color:#ffffff;margin-bottom:8px;">Global Governance of High-Risk Artificial Intelligence</div>
+            <div style="font-size:12px;letter-spacing:0.04em;color:#D9D9D9;text-decoration:underline;">READ PAPER →</div>
+          </a>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALHuangXLabSRF23-OpenSourceLLMsTrends-e3518fe16ccd86b8.pdf" target="_blank" style="display:block;background:#4D4D4D;padding:20px 22px;border-left:3px solid #800000;">
+            <div style="font-size:14.5px;line-height:1.5;color:#ffffff;margin-bottom:8px;">Open-source Language Models: Contributing Factors and Future Trends</div>
+            <div style="font-size:12px;letter-spacing:0.04em;color:#D9D9D9;text-decoration:underline;">READ PAPER →</div>
+          </a>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="background: #FFFFFF; padding: 88px 48px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="font-size:12px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:14px;">FROM PAST COHORTS</div>
+      <h2 style="font-size:30px;font-weight:700;margin:0 0 48px;color:#000000;">Fellow Testimonials</h2>
+      <div style="display:flex;flex-direction:column;gap:0;">
+          <div style="display:flex;align-items:center;gap:28px;padding:32px 0;border-bottom:1px solid #D9D9D9;">
+            <div style="display:flex;align-items:center;gap:16px;width:220px;flex-shrink:0;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#800000;color:#ffffff;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">A</div>
+              <div style="font-size:14px;color:#000000;font-weight:600;">2025 Fellow</div>
+              <div style="height:1px;flex:1;background:#D9D9D9;"></div>
+            </div>
+            <p style="font-size:18px;line-height:1.6;font-style:italic;color:#000000;margin:0;font-family:Georgia,serif;">&#8220;I have loved every minute of x-lab, particularly the opportunity to meet so many like-minded but uniquely smart people working on subject areas different from mine.&#8221;</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:28px;padding:32px 0;border-bottom:1px solid #D9D9D9;">
+            <div style="display:flex;align-items:center;gap:16px;width:220px;flex-shrink:0;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#404040;color:#ffffff;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">J</div>
+              <div style="font-size:14px;color:#000000;font-weight:600;">2024 Fellow</div>
+              <div style="height:1px;flex:1;background:#D9D9D9;"></div>
+            </div>
+            <p style="font-size:18px;line-height:1.6;font-style:italic;color:#000000;margin:0;font-family:Georgia,serif;">&#8220;It was quite different from what I anticipated but in a better way — there was a good amount of interaction with my cohort that I didn’t expect.&#8221;</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:28px;padding:32px 0;border-bottom:1px solid #D9D9D9;">
+            <div style="display:flex;align-items:center;gap:16px;width:220px;flex-shrink:0;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#737373;color:#ffffff;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">M</div>
+              <div style="font-size:14px;color:#000000;font-weight:600;">2023 Fellow</div>
+              <div style="height:1px;flex:1;background:#D9D9D9;"></div>
+            </div>
+            <p style="font-size:18px;line-height:1.6;font-style:italic;color:#000000;margin:0;font-family:Georgia,serif;">&#8220;I didn’t anticipate having so much freedom. While it was intimidating at first, it was definitely the challenge I needed.&#8221;</p>
+          </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer style="background:#404040;width:100%;">
+    <div style="max-width:1430px;margin:0 auto;padding:60px 24px;box-sizing:border-box;">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:32px;">
+        <a href="https://www.uchicago.edu" style="display:block;">
+          <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/uchicago_wordmark.svg" alt="The University of Chicago" style="width:260px;height:auto;display:block;">
+        </a>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
+          <div style="font-size:12px;color:#ffffff;opacity:0.8;">XLab · Existential Risk Laboratory</div>
+          <div style="display:flex;gap:20px;">
+            <a href="https://accessibility.uchicago.edu/" target="_blank" class="footer-link">Accessibility</a>
+            <a href="https://privacy.uchicago.edu/privacy-policy/" target="_blank" class="footer-link">Privacy Policy</a>
+            <a href="mailto:xlab-info@uchicago.edu" class="footer-link">Contact</a>
+          </div>
+          <div style="font-size:10px;color:#ffffff;opacity:0.8;">© University of Chicago · All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div><script>
+document.querySelectorAll('[data-reveal]').forEach(function(el){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='translateY(0)'; io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  el.style.opacity=0; el.style.transform='translateY(18px)'; el.style.transition='opacity 0.7s ease, transform 0.7s ease';
+  io.observe(el);
+});
+window.addEventListener('scroll', function(){
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = h>0 ? Math.min(100, (window.scrollY/h)*100) : 0;
+  var bar = document.getElementById('scrollbar');
+  if(bar) bar.style.width = pct+'%';
+}, {passive:true});
+</script>
+</body>
+</html>

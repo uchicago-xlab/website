@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past Fellows' Work — XLab</title>
+<meta name="description" content="Browse research papers and projects produced by XLab Summer Research Fellows since 2022.">
+<link href="https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/UChicagoSansSerif.css" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #ffffff; font-family: 'UChicago Sans Serif', Helvetica, Arial, sans-serif; color: #000000; }
+  a { color: #800000; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ::selection { background: #800000; color: #ffffff; }
+  @font-face { font-family:'XOX Stencil'; src:url('brand/fonts/XOX-Stencil-v2.otf') format('opentype'); font-display:swap; }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown .dropdown-menu { opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
+  .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu { opacity: 1; pointer-events: auto; }
+  .footer-link { font-size: 11px; color: #ffffff; opacity: 0.8; text-decoration: underline dotted; }
+  .footer-link:hover { opacity: 1; text-decoration: underline solid; }
+  .skip-link:focus { left: 16px !important; top: 16px !important; }
+  .year-btn { font-size:13px;letter-spacing:0.04em;font-weight:700;padding:10px 20px;border-radius:20px;cursor:pointer;background:#ffffff;color:#000000;border:1px solid #D9D9D9; }
+  .year-btn.active { background:#800000;color:#ffffff;border-color:#800000; }
+  .fellow-card{display:none;} .fellow-card.visible{display:block;}
+</style>
+</head>
+<body>
+<div style="background:#ffffff;color:#000000;min-height:100vh;">
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a>
+  <div style="background:#800000;width:100%;">
+    <div style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
+      <a href="https://www.uchicago.edu" style="display:flex;align-items:center;gap:10px;" aria-label="The University of Chicago">
+        <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg" alt="" style="width:30px;height:25px;display:block;">
+        <span style="color:#ffffff;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;">The University of Chicago</span>
+      </a>
+      <button type="button" aria-label="Search uchicago.edu" style="background:none;border:none;padding:4px;cursor:pointer;display:flex;align-items:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div style="background:#ffffff;width:100%;padding:24px 0;">
+    <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
+      <a href="index.html" style="display:block;">
+        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
+      </a>
+    </div>
+  </div>
+  <nav style="background:#ffffff;width:100%;border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;position:sticky;top:0;z-index:50;">
+    <div style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
+      <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
+      <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">ABOUT</a>
+      <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">RISK AREAS</a>
+      <div class="nav-dropdown">
+        <a href="fellowship.html" tabindex="0" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;display:inline-block;">FELLOWSHIP</a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:210px;padding:6px;z-index:60;">
+          <a href="fellowship.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Program Overview</a>
+          <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#800000;white-space:nowrap;font-weight:700;">Past Fellows' Work</a>
+        </div>
+      </div>
+      <a href="https://nobelassembly.org/" target="_blank" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+    </div>
+  </nav>
+  <main id="main-content">
+  <section style="background:#404040;padding:64px 48px 56px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <a href="fellowship.html" style="font-size:13px;letter-spacing:0.04em;color:#D9D9D9;">← FELLOWSHIP OVERVIEW</a>
+      <div style="font-size:12px;letter-spacing:0.24em;color:#ffffff;font-weight:600;margin:24px 0 16px;">PAST FELLOWS</div>
+      <h1 style="font-family:'XOX Stencil',serif;font-weight:400;text-transform:uppercase;font-size:clamp(34px,5vw,54px);line-height:1.05;margin:0 0 16px;color:#ffffff;">What our fellows have built.</h1>
+      <p style="font-size:15px;line-height:1.6;color:#D9D9D9;margin:0;max-width:600px;">Sixty alumni since 2022, publishing on AI safety, security governance, and nuclear risk. Browse by cohort year below.</p>
+    </div>
+  </section>
+  <section style="padding:40px 48px 0;max-width:1180px;margin:0 auto;">
+    <div id="year-filters" style="display:flex;gap:10px;flex-wrap:wrap;border-bottom:1px solid #D9D9D9;padding-bottom:32px;">
+      <button type="button" class="year-btn active" data-year="All">All</button>
+      <button type="button" class="year-btn" data-year="2025">2025</button>
+      <button type="button" class="year-btn" data-year="2024">2024</button>
+      <button type="button" class="year-btn" data-year="2023">2023</button>
+      <button type="button" class="year-btn" data-year="2022">2022</button>
+    </div>
+  </section>
+  <section style="padding:48px 48px 100px;max-width:1180px;margin:0 auto;">
+    <div id="fellow-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-yixiong-hao" src="uploads/Screenshot-2026-05-15-at-12.16.47.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Yixiong Hao</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science, Georgia Institute of Technology '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Mantas Mazeika, Center for AI Safety</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://www.lesswrong.com/posts/XC28DmEYPLqfwc8tf/we-need-a-better-way-to-evaluate-emergent-misalignment" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">We Need a Better Way to Evaluate Emergent Misalignment</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-will-anderson" src="uploads/Screenshot-2026-05-15-at-12.17.30.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Will Anderson</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">CS, Data Science & Mathematics, University of Wisconsin-Madison '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Lewis Hammond, Oxford University / Cooperative AI Foundation</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Will_Anderson.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Diffuse Attacks on Multiagent Systems</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-jo-jiao" src="uploads/Screenshot-2026-05-15-at-12.19.20.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Jo Jiao</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Mathematics and Philosophy, University of Chicago '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: James Evans, UChicago; Austin Koslowski, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jo_Jiao.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Narrow RL Induces Broad Behavior Changes in LLMs</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-daniel-allen" src="uploads/Screenshot-2026-05-15-at-12.24.07.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Daniel Allen</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Political Science and Cultural Anthropology, Middlebury College '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Nicole Kikendall, Argonne National Laboratory</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Daniel_Allen.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Rethinking Biological Weapon Deterrence in the 21st Century</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-samara-shaz" src="uploads/Screenshot-2026-05-15-at-12.22.04.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Samara Shaz</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">MA Committee for International Relations, University of Chicago '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Thomas Fraise, SciencesPo</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Samara_Shaz.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Regime Change and Credibility: Implications of Democratic Backsliding on Deterrence</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-olivia-long" src="uploads/Screenshot-2026-05-15-at-12.23.09.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Olivia Long</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">CS, Mathematics & Cognitive Science, Columbia University '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Carter Teplica, New York University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Olivia_Long.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">The AI in the Mirror: LLM Self-Recognition in an Iterated Public Goods Game</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-atharva-nihlani" src="uploads/Screenshot-2026-05-15-at-12.24.22.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Atharva Nihlani</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science, Brown University '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Michael Lepori, Brown University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/eliciting_situational_awareness_new_sharing/" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Eliciting Situational Awareness in Large Language Models Through Fine-Tuning</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-edmund-bu" src="uploads/Screenshot-2026-05-15-at-12.25.01.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Edmund Bu</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">EE, Mathematics & CS, UC San Diego '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Yossi Gandelsman, TTIC</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Edmund_Bu.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Interpreting ResNet-based CLIP via Neuron-Attention Decomposition</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-yilin-huang" src="uploads/Screenshot-2026-05-15-at-12.25.57.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Yilin Huang</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Political Science and Mathematics, Amherst College '28</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Josh You, Epoch AI</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Yilin_Huang.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Position: Why AI R&D Benchmarks Need to Measure Research Judgement Separately</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-jay-kim" src="uploads/Screenshot-2026-05-15-at-12.27.54.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Jay Kim</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science, Williams College '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Joe O'Brien, IAPS</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jay_Kim.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Rethinking Priorities for Frontier AI Security</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-aditya-singh" src="uploads/1764690153233.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Aditya Singh</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computational and Applied Mathematics & Statistics, University of Chicago '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Adam Karvonen, MATS</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Aditya_Singh.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Lessons from Studying Model Organisms of Hidden Behavior</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-yerin-yoon" src="uploads/Screenshot-2026-05-15-at-12.25.38.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Yerin Yoon</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">MA International Relations, The Fletcher School at Tufts University '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Lami Kim, Asia-Pacific Center for Security Studies</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Yerin_Yoon.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Alignment as Deterrence: The U.S.-ROK Policy Alignment and North Korea's Provocations (1993-2023)</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2025">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2025-jacopo-minniti" src="uploads/Screenshot-2026-05-15-at-12.27.18.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Jacopo Minniti</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computational Sciences, Minerva University '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Tim Rudner, NYU/CSET; Neil Band, Stanford University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2026/05/SRF25_Jacopo_Minniti.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Uncertainty Aware Tree Search: Using LLM Internals to Allocate Exploration Budget</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-audrey-weckwerth" src="uploads/Screenshot-2024-10-30-at-13.53.06.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Audrey Weckwerth</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">BA/MA Global Studies and International Relations, University of Chicago '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Christopher Twomey, Naval Postgraduate School</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Weckwerth_Audrey.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Strait to Catastrophe: Perceptual Factors in US-China-Taiwan Defense Posture and Nuclear Escalation</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-amina-anowara" src="uploads/Screenshot-2024-10-30-at-13.58.47.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Amina Anowara</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Chemical and Biological Engineering, Princeton University '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Junhong Chen, UChicago; Aaron Shi, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Anowara_Amina.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Integration of Remote Floating Gate FET-based Biosensor with Millifluidic Systems for Point-of-Care Diagnostics</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-aryan-shrivastava" src="uploads/final.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Aryan Shrivastava</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Mathematics, University of Chicago '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Jessica Hullman, Northwestern University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://arxiv.org/abs/2410.13204" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Response Inconsistency of Large Language Models in High-Stakes Military Decision Making</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-rhea-kanuparthi" src="uploads/kanuparthi_resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Rhea Kanuparthi</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Political Science and Mathematics, University of Chicago '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Ankit Panda, Carnegie Endowment for International Peace</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Kanuparthi_Rhea.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Nukes and Ladders: India and Pakistan's Nuclear Evolution</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-simon-siskel" src="uploads/siskel-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Simon Siskel</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Political Science and Mathematics, University of Chicago '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Paul Bracken, Yale University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Siskel_Simon.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Deterrence and Deescalation: U.S. Strategies for a Nuclear-Capable Iran</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-anastasia-wei" src="uploads/anastasia-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Anastasia Wei</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Physics and Data Science, Northwestern University '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Kiho Park, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Wei_Anastasia.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Locating Semantic Understanding: Semantically Similar Sentences in Large Language Models</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-sanyu-rajakumar" src="uploads/Sanyu-Resized.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Sanyu Rajakumar</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computational Biology, Brown University '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Rudolf Laine, Oxford University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/eliciting_situational_awareness_new_sharing/" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Eliciting Situational Awareness in Large Language Models Through Fine-Tuning</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-sophia-lloyd-george" src="uploads/sophie-LG-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Sophia Lloyd-George</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Physics, Philosophy & Computer Science, Brown University '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Bo Li, UIUC; Stephen Casper, MIT</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Breaking the Circuit Breaker: When Does Circuit Breaking Safety Unlearning Fail?</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-kevin-li" src="uploads/kevin-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Kevin Li</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">MA Committee on International Relations, University of Chicago '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Charles Glaser, MIT</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/Tripolarity-Resolve-and-Nuclear-Risks.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Tripolarity, Resolve, and Nuclear Risks</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-lavinia-cavalet" src="uploads/cavalet-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Lavinia Cavalet</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">BA/MA Economics and International Relations, University of Chicago '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Austin Carson, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Cavalet_Lavinia.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">To Arm or Not to Arm: an Arctic Dilemma</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-james-rosenberger" src="uploads/james-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">James Rosenberger</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computational and Applied Mathematics & Statistics, University of Chicago '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Mihai Anitescu, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Rosenberger_James.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Measuring Community Significance and State Vulnerability After Nuclear Winter</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-helena-tran" src="uploads/Helena-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Helena Tran</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Mathematics, University of California Irvine '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Olli Järviniemi, University of Helsinki</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Tran_Helena.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Situational Awareness and Consistency in Language Model Deception: a Simulated AI Company Assistant</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-robert-shin" src="uploads/shin-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Robert Shin</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Physics and Statistics, University of Chicago '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Carter Teplica, New York University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Shin_Robert.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Investigating Fourier Representations and Learned Algorithms within Grokked Transformers</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-melody-gui" src="uploads/gui-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Melody Gui</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science and Philosophy, University of Southern California '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Bo Li, UIUC; Stephen Casper, MIT</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Breaking the Circuit Breaker: When Does Circuit Breaking Safety Unlearning Fail?</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-abhay-katoch" src="uploads/katoch-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Abhay Katoch</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Biotechnology, Queen's University at Kingston '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Jonathan Ozik, UChicago/Argonne</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/FINAL_Katoch_Abhay.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Modeling the Optimal Distribution of Wastewater-Based Surveillance Techniques</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-jibang-wu" src="uploads/jibang-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Jibang Wu</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">PhD Computer Science, University of Chicago</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Haifeng Xu, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SFR24_FINAl_Jibang.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Grounded Persuasive Language Generation for Automated Marketing</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-austin-coffey" src="uploads/Screenshot-2024-10-30-at-14.03.07.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Austin Coffey</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">MPhil in Policy Analysis, RAND Pardee '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: James Steinberg, Johns Hopkins University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/10/SRF24_FINAL_Coffey_Austin.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Managing Conflict in the South China Sea</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2024">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2024-julien-benchek" src="uploads/Benchek_resized.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Julien Benchek</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Political Science, Economics & Physics, University of Chicago '27</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;"></div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2025/01/Benchek_SRF24_Final_Paper.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Large Language Models Exhibit Cognitive Biases in Interactive Stock Trading Scenarios</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-allison-huang" src="uploads/allison-30eacb2c7014569d.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Allison Huang</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Art, Technology, and Business of Innovation, USC '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Hadrien Pouget, Carnegie Endowment for International Peace</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALHuangXLabSRF23-OpenSourceLLMsTrends-e3518fe16ccd86b8.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Open-source Language Models: Identifying Contributing Factors and Future Trends</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-anisha-hisham" src="uploads/anisha-9d2f64617782bdbe.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Anisha Hisham</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Master of Public Policy, University of Chicago '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Alexander Arroyo, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/HishamXLabSRF23-ClimateRiskPakistan-bff5d26551c1e5b9.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Status of Adaptation to Climate Risk in Pakistan</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-carter-teplica" src="uploads/carter-f508bc8d11494313.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Carter Teplica</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Mathematics, Columbia University '23</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Yibo Jiang, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/TeplicaXLabSRF23-MechInterpDistilGPT2-2a75a059d1e8720b.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A Mechanistic Analysis of Counting in Distil-GPT2</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-coleman-snell" src="uploads/coleman-468f64fbde087fe3.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Coleman Snell</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Moral Psychology & Philosophy, Cornell University '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Lara Mani, Centre for the Study of Existential Risk, Cambridge</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Group Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">X-Risk Communications Strategy & Introductory XLab Material</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-duc-nguyen" src="uploads/duc-77ae8e53207c5541.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Duc Nguyen</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Physics, University of Chicago '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Tiffany Shaw, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALNguyenXLabSRF23-NuclearWinterSootInjection-f3de9649e7180d70.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Examining Temperature Fluctuations and Soot Deposition in Nuclear Winter</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-josephine-dodge" src="uploads/josephine-da2716d6637de008.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Josephine Dodge</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Mathematics & Economics, University of Chicago '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;"></div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Effectiveness of Advance Market Commitments for Vaccines in Pandemic Preparedness</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-joshua-payne" src="uploads/joshua-0c75e9c2d32d507f.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Joshua Payne</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Molecular Engineering & Biochemistry, University of Chicago '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Alex Kleinman, PanLabs</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/Joshua-2024-Paper-57145faf92bd2ca2.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Optimizing 3' UTR Sequences and Secondary Structures to Improve mRNA Vaccine Thermostability</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-julian-baldwin" src="uploads/julian-1efe9794c44f0370.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Julian Baldwin</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">BS/MS Computer Science, Northwestern University '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: David Reber, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALBaldwinXLabSRF23-LimitsOfOthelloGPTsEmergentRepresentation-204d4ed6c6475eac.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Exploring the Limits of OthelloGPT's Emergent Representations</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-laura-messner" src="uploads/laura-9b9733251f6ab19c.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Laura Messner</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Economics & Mathematics, Columbia University '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Anton Korinek, University of Virginia</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">AI, Automation, and Systemic Risks</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-miles-wang" src="uploads/miles-f17b4e384cdbe009.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Miles Wang</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science and Government, Harvard College '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Tony Wang, MIT</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://arxiv.org/abs/2312.08793" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Forbidden Facts: An Investigation of Competing Objectives in Llama-2</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-mishaal-lakhani" src="uploads/mishaal-c1ec88fbb6fea985.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Mishaal Lakhani</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Social Sciences & Business, Minerva University '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Lara Mani, Centre for the Study of Existential Risk, Cambridge</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Group Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">X-Risk Communications Strategy & Introductory XLab Material</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-oksana-vickers" src="uploads/oksana-c94aea13c3de2a0b.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Oksana Vickers</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Political Science & Russian/Eastern European Studies, University of Chicago '23</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Austin Carson, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALVickersXLabSRF23-TacticalNuclearWeaponsUaRu-d3174974a3d09185.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Risk Assessment of Russian Use of Tactical Nuclear Weapons</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-shuyuan-wang" src="uploads/lily-573d381c273170a9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Shuyuan Wang</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">CS, Philosophy & Fundamentals: Issues and Texts, University of Chicago '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Chenhao Tan, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Group Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALWangJiWangXLabSRF23-AIReflectionAgentPolicyDeliberation-1608fcce214321a8.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Building an AI Reflection Agent for Policy Deliberation</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-stephan-llerena" src="uploads/stephan-8bfd027861f87cf9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Stephan Llerena</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Juris Doctor, University of Michigan Law School '22</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: José Jaime Villalobos, Legal Priorities Project</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALLlerenaXLabSRF23-GlobalGovernanceOfHighRiskAI-0334e1dd25e37cae.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Global Governance of High-Risk Artificial Intelligence</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-vincent-li" src="uploads/vincent-05c466ae94577695.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Vincent Li</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science, Yale University '26</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Nick Doiron, Determined AI</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALLiXLabSRF23-UnitTestingQuixbugs-d1a44105cfa242ca.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Prompting Code Interpreter to Write Better Unit Tests on Quixbugs Functions</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2023">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2023-yuxin-ji" src="uploads/jessica-de49c6560b7d073e.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Yuxin Ji</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">MA Computational Social Science, University of Chicago '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Chenhao Tan, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Group Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/FINALWangJiWangXLabSRF23-AIReflectionAgentPolicyDeliberation-1608fcce214321a8.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Building an AI Reflection Agent for Policy Deliberation</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-sandro-del-rivo" src="uploads/sandro-cefcc9b9cbe2a930.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Sandro Del Rivo</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science & Philosophy, University of Chicago '23</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Victor Veitch, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/DelRivoXLabSRF22-WillAGILearnAlienConcepts-75d1dfa546ef02ab.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Will AGI Learn Alien Concepts?</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-soren-dunn" src="uploads/soren-b58c98ac2f429044.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Soren Dunn</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Chemistry, Statistics & Data Science, University of Chicago '23</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Victor Veitch, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/DunnXLabSRF22-ImprovingHumanEvaluationOfFactualAccuracyLLMs-c8c1fa49608848be.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Improving Evaluation of Factual Accuracy in Language Models</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-grant-harris" src="uploads/grant-267f96c590d0a9d9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Grant Harris</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Economics & Computational and Applied Math, University of Chicago '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Ali Merali, Yale University</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/HarrisXLabSRF22-CooperativeAIPrimer-3ab448da41f42fd7.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Cooperative AI: A Primer</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-sudhamshu-hosamane" src="uploads/sudhamshu-7446a6b2e78e67c8.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Sudhamshu Hosamane</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">MA Computational Social Science, University of Chicago '23</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Munmun De Choudhury, Georgia Institute of Technology</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Effective Strategies to Tackle Misinformation on Messaging Apps</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-henry-josephson" src="uploads/henry-0efa75fd41ace392.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Henry Josephson</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Philosophy & Data Science, University of Chicago '25</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Cullen O'Keefe, OpenAI</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/JosephsonXLabSRF22-CaliforniaEffectAI-fa2b6d382dfdd902.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A California Effect for Artificial Intelligence</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-theo-ko" src="uploads/theo-465dccb15f371bbf.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Theo Ko</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science & Computational and Applied Math, University of Chicago '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Claire Donnat, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/KoXLabSRF22-InterpretingBlackboxGraphNeuralNetworkThroughNodeMasking-85e7226e8274b438.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Assessing Fairness of a Blackbox Graph Neural Network Model Through Node Masking</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-nicole-mateo" src="uploads/nicole-ea24c682d033d924.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Nicole Mateo</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Psychology & Critical Race and Ethnic Studies, University of Chicago '24</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Anna Reosti, American Bar Foundation</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Survey of POC and Impressions of AI Risk</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-jack-wippell" src="uploads/jack-d567cb531f3dc7c4.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Jack Wippell</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">MA International Relations, University of Chicago '22</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Robert Trager, UCLA; Duncan Snidal, Oxford</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="#" target="_self" style="color:#ffffff;opacity:0.7;pointer-events:none;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">When Deviation is Not an Option: Lessons from Reykjavik on Zero-Fail Treaties</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-andrew-yang" src="uploads/andrew-3d68890e8688368d.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Andrew Yang</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">Computer Science & Linguistics, University of Chicago '23</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Allyson Ettinger, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/YangAXLabSRF22-KnowledgeGraphsForLLMEvals-17939c6974e12928.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">Knowledge Graphs for Language Model Evaluation</a>
+        </div>
+      </div>
+      <div class="fellow-card visible" data-year="2022">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
+          <image-slot id="fellow-2022-freddie-yang" src="uploads/freddie-cbacc3a5aa37934a.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
+          <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
+          <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
+            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Freddie Yang</div>
+            <div style="font-size:10px;opacity:0.75;margin-bottom:3px;line-height:1.3;">MA Research Methods, University of Chicago Harris School '23</div>
+            <div style="font-size:10px;opacity:0.65;line-height:1.3;font-style:italic;">Mentor: Allyson Ettinger, UChicago</div>
+          </div>
+        </div>
+        <div style="padding:12px 2px 0;">
+          <span style="font-size:11px;font-weight:700;color:#4D4D4D;letter-spacing:0.03em;">Project: </span>
+          <a href="https://xrisk.uchicago.edu/files/2024/02/YangXLabSRF22-MultitaskLearningAIXRisk-2e6e85f550820385.pdf" target="_blank" style="color:#D9635A;text-decoration:underline;text-underline-offset:2px;font-size:12.5px;font-weight:700;line-height:1.4;font-style:normal;">A Random Thought on Multi-task Learning and AI Existential Risks</a>
+        </div>
+      </div>
+    </div>
+    <div id="no-results" style="display:none;text-align:center;padding:60px 0;color:#737373;font-size:14px;">Outputs from this cohort are being added — check back soon.</div>
+  </section>
+  <section style="background:#D9D9D9;padding:80px 48px;text-align:center;">
+    <h2 style="font-size:24px;font-weight:700;margin:0 0 16px;color:#000000;">Be next year's cohort.</h2>
+    <p style="font-size:15px;line-height:1.6;color:#4D4D4D;max-width:520px;margin:0 auto 28px;">Applications for the Summer Research Fellowship open each winter.</p>
+    <a href="fellowship.html" style="font-size:13px;letter-spacing:0.06em;color:#ffffff;background:#800000;padding:14px 30px;">LEARN MORE →</a>
+  </section>
+  </main>
+  <footer style="background:#404040;width:100%;">
+    <div style="max-width:1430px;margin:0 auto;padding:60px 24px;box-sizing:border-box;">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:32px;">
+        <a href="https://www.uchicago.edu" style="display:block;">
+          <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/uchicago_wordmark.svg" alt="The University of Chicago" style="width:260px;height:auto;display:block;">
+        </a>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
+          <div style="font-size:12px;color:#ffffff;opacity:0.8;">XLab · Existential Risk Laboratory</div>
+          <div style="display:flex;gap:20px;">
+            <a href="https://accessibility.uchicago.edu/" target="_blank" class="footer-link">Accessibility</a>
+            <a href="https://privacy.uchicago.edu/privacy-policy/" target="_blank" class="footer-link">Privacy Policy</a>
+            <a href="mailto:xlab-info@uchicago.edu" class="footer-link">Contact</a>
+          </div>
+          <div style="font-size:10px;color:#ffffff;opacity:0.8;">© University of Chicago · All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div><script>
+document.getElementById('year-filters').addEventListener('click', function(e){
+  var btn = e.target.closest('.year-btn');
+  if(!btn) return;
+  document.querySelectorAll('.year-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var year = btn.getAttribute('data-year');
+  var cards = document.querySelectorAll('.fellow-card');
+  var visibleCount = 0;
+  cards.forEach(function(c){
+    var show = year === 'All' || c.getAttribute('data-year') === year;
+    c.classList.toggle('visible', show);
+    if(show) visibleCount++;
+  });
+  document.getElementById('no-results').style.display = visibleCount === 0 ? 'block' : 'none';
+});
+</script>
+</body>
+</html>

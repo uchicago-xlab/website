@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risk Areas — XLab</title>
+<meta name="description" content="XLab's four fronts of catastrophic risk: artificial intelligence, nuclear weapons, biosecurity, and climate.">
+<link href="https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/UChicagoSansSerif.css" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #ffffff; font-family: 'UChicago Sans Serif', Helvetica, Arial, sans-serif; color: #000000; }
+  a { color: #800000; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ::selection { background: #800000; color: #ffffff; }
+  @font-face { font-family:'XOX Stencil'; src:url('brand/fonts/XOX-Stencil-v2.otf') format('opentype'); font-display:swap; }
+  @keyframes heroZoom { 0% { transform: scale(1); } 100% { transform: scale(1.09); } }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown .dropdown-menu { opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
+  .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu { opacity: 1; pointer-events: auto; }
+  .dropdown-menu a:hover { background: #F5F5F5; text-decoration: none; }
+  .footer-link { font-size: 11px; color: #ffffff; opacity: 0.8; text-decoration: underline dotted; }
+  .footer-link:hover { opacity: 1; text-decoration: underline solid; }
+  .skip-link:focus { left: 16px !important; top: 16px !important; }
+  .year-btn { font-size:13px;letter-spacing:0.04em;font-weight:700;padding:10px 20px;border-radius:20px;cursor:pointer;background:#ffffff;color:#000000;border:1px solid #D9D9D9; }
+  .year-btn.active { background:#800000;color:#ffffff;border-color:#800000; }
+  .fellow-card{display:none;} .fellow-card.visible{display:block;}
+</style>
+</head>
+<body>
+<div style="background:#ffffff;color:#000000;min-height:100vh;">
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a>
+  <div style="background:#800000;width:100%;">
+    <div style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
+      <a href="https://www.uchicago.edu" style="display:flex;align-items:center;gap:10px;" aria-label="The University of Chicago">
+        <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg" alt="" style="width:30px;height:25px;display:block;">
+        <span style="color:#ffffff;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;">The University of Chicago</span>
+      </a>
+      <button type="button" aria-label="Search uchicago.edu" style="background:none;border:none;padding:4px;cursor:pointer;display:flex;align-items:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div style="background:#ffffff;width:100%;padding:24px 0;">
+    <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
+      <a href="index.html" style="display:block;">
+        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
+      </a>
+    </div>
+  </div>
+  <nav style="background:#ffffff;width:100%;border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;position:sticky;top:0;z-index:50;">
+    <div style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
+      <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
+      <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">ABOUT</a>
+      <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#800000;border-bottom:2px solid #800000;padding-bottom:4px;white-space:nowrap;">RISK AREAS</a>
+      <div class="nav-dropdown">
+        <a href="fellowship.html" tabindex="0" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;display:inline-block;">FELLOWSHIP</a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:210px;padding:6px;z-index:60;">
+          <a href="fellowship.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Program Overview</a>
+          <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Past Fellows' Work</a>
+        </div>
+      </div>
+      <a href="https://nobelassembly.org/" target="_blank" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+    </div>
+  </nav>
+  <main id="main-content">
+  <section style="position:relative;min-height:420px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:#404040;">
+    <div style="position:absolute;inset:0;overflow:hidden;">
+      <div style="position:absolute;inset:-4%;animation:heroZoom 22s ease-in-out infinite alternate;">
+        <img src="images/reading-room.jpg" alt="Reading room in a University of Chicago library" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);">
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.82) 100%);"></div>
+    </div>
+    <img src="brand/xlab-logo-header-mark.png" alt="" style="position:absolute;top:28px;right:40px;width:60px;opacity:0.55;">
+    <div style="position:relative;padding:130px 56px;max-width:1180px;margin:0 auto;width:100%;box-sizing:border-box;">
+      <div style="font-size:12px;letter-spacing:0.24em;color:#ffffff;font-weight:600;margin-bottom:32px;">RISK AREAS</div>
+      <h1 style="font-family:'XOX Stencil',serif;font-weight:400;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:-0.01em;margin:0 0 28px;max-width:860px;color:#ffffff;text-transform:uppercase;">Four fronts of catastrophic risk.</h1>
+      <div style="display:flex;align-items:center;gap:20px;">
+        <div style="width:38px;height:1px;background:#ffffff;flex-shrink:0;"></div>
+        <p style="font-size:15px;line-height:1.6;color:#D9D9D9;margin:0;max-width:460px;">Necessarily interdisciplinary, cutting across technology, policy, and international security.</p>
+      </div>
+    </div>
+  </section>
+  <section style="padding: 24px 48px 0; max-width: 1180px; margin: 0 auto;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:1px solid #D9D9D9;padding-bottom:20px;">
+      <h2 style="font-size:14px;letter-spacing:0.14em;font-weight:700;color:#000000;margin:0;">01 — PRIMARY RISK AREAS</h2>
+    </div>
+  </section>
+  <section style="padding: 76px 48px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+      <div style="border:1px solid #D9D9D9;border-radius:14px;box-shadow:0 16px 36px rgba(0,0,0,0.08);padding:44px;display:flex;flex-direction:column;background:#ffffff;">
+        <img src="brand/icon-ai.png" alt="" style="width:64px;height:64px;object-fit:contain;margin-bottom:24px;">
+        <h3 style="font-size:26px;font-weight:700;margin:0 0 16px;color:#000000;">Artificial Intelligence</h3>
+        <p style="font-size:15px;line-height:1.7;color:#4D4D4D;margin:0 0 22px;flex:1;">AI capabilities are developing at an exponential rate. AI experts are warning of potentially catastrophic consequences of the technology they themselves are developing, including misinformation campaigns, reduced barriers to bioterrorism, and rogue autonomous models.</p>
+        <a href="risk-ai.html" style="font-size:13px;letter-spacing:0.05em;font-weight:700;color:#800000;border-bottom:1px solid #800000;padding-bottom:3px;align-self:flex-start;">READ FULL BRIEF →</a>
+      </div>
+      <div style="border:1px solid #D9D9D9;border-radius:14px;box-shadow:0 16px 36px rgba(0,0,0,0.08);padding:44px;display:flex;flex-direction:column;background:#ffffff;">
+        <img src="brand/icon-nuclear.png" alt="" style="width:64px;height:64px;object-fit:contain;margin-bottom:24px;">
+        <h3 style="font-size:26px;font-weight:700;margin:0 0 16px;color:#000000;">Nuclear Weapons</h3>
+        <p style="font-size:15px;line-height:1.7;color:#4D4D4D;margin:0 0 22px;flex:1;">Thousands of nuclear weapons around the world remain on hair-trigger alert — a false alarm or a single impulsive decision away from conflagration. Once launched, a missile cannot be recalled or shot down.</p>
+        <a href="risk-nuclear.html" style="font-size:13px;letter-spacing:0.05em;font-weight:700;color:#800000;border-bottom:1px solid #800000;padding-bottom:3px;align-self:flex-start;">READ FULL BRIEF →</a>
+      </div>
+    </div>
+  </section>
+  <section style="padding: 88px 48px; max-width: 1180px; margin: 0 auto;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:1px solid #D9D9D9;padding-bottom:20px;margin-bottom:40px;">
+      <h2 style="font-size:14px;letter-spacing:0.14em;font-weight:700;color:#000000;margin:0;">02 — SECONDARY RISK AREAS</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#D9D9D9;border:1px solid #D9D9D9;">
+      <div style="background:#ffffff;padding:36px;display:flex;gap:20px;align-items:flex-start;">
+        <img src="brand/icon-bio.png" alt="" style="width: 60px; height: 95px; object-fit: contain; flex-shrink: 0; margin-top: 2px; opacity: 0.85">
+        <div>
+          <h3 style="font-size:17px;font-weight:700;margin:0 0 10px;color:#000000;">Biosecurity</h3>
+          <p style="font-size:14px;line-height:1.6;color:#4D4D4D;margin:0;">Rising ability to engineer pathogens, and a history of laboratory leaks, threaten outbreaks of unprecedented danger. XLab's biosecurity research program is in early development.</p>
+        </div>
+      </div>
+      <div style="background:#ffffff;padding:36px;display:flex;gap:20px;align-items:flex-start;">
+        <img src="brand/icon-climate.png" alt="" style="width: 60px; height: 95px; object-fit: contain; flex-shrink: 0; margin-top: 2px; opacity: 0.85">
+        <div>
+          <h3 style="font-size:17px;font-weight:700;margin:0 0 10px;color:#000000;">Climate</h3>
+          <p style="font-size:14px;line-height:1.6;color:#4D4D4D;margin:0;">Feedback effects beyond a tipping point could lead to catastrophic outcomes. XLab's climate risk research program is in early development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:#D9D9D9;padding:88px 48px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <h2 style="font-size:24px;font-weight:700;margin:0 0 40px;color:#000000;">More on These Risks</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <a href="https://thebulletin.org/2025/10/a-bulletin-resource-guide-to-viewing-a-house-of-dynamite/" target="_blank" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
+          <div style="font-size:11px;letter-spacing:0.1em;color:#800000;font-weight:700;margin-bottom:10px;">SCREENING</div>
+          <h3 style="font-size:16px;font-weight:700;margin:0 0 10px;color:#000000;">A House of Dynamite</h3>
+          <p style="font-size:13.5px;line-height:1.55;color:#4D4D4D;margin:0;">With the Bulletin of the Atomic Scientists, XLab hosted a screening of Kathryn Bigelow's nuclear-war thriller.</p>
+        </a>
+        <a href="https://thebulletin.org/doomsday-clock/" target="_blank" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
+          <div style="font-size:11px;letter-spacing:0.1em;color:#800000;font-weight:700;margin-bottom:10px;">PANEL</div>
+          <h3 style="font-size:16px;font-weight:700;margin:0 0 10px;color:#000000;">The Doomsday Clock</h3>
+          <p style="font-size:13.5px;line-height:1.55;color:#4D4D4D;margin:0;">A panel discussion on the Bulletin of the Atomic Scientists' annual Doomsday Clock announcement.</p>
+        </a>
+        <a href="https://xrisk.uchicago.edu/files/2026/03/Rethinking-Priorities-for-Frontier-AI-Security.pdf" target="_blank" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
+          <div style="font-size:11px;letter-spacing:0.1em;color:#800000;font-weight:700;margin-bottom:10px;">RESEARCH</div>
+          <h3 style="font-size:16px;font-weight:700;margin:0 0 10px;color:#000000;">Rethinking Priorities for Frontier AI Security</h3>
+          <p style="font-size:13.5px;line-height:1.55;color:#4D4D4D;margin:0;">A 2025 fellow's paper on prioritization in frontier AI security research.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section style="padding:96px 48px;max-width:1180px;margin:0 auto;text-align:center;">
+    <h2 style="font-size:26px;font-weight:700;margin:0 0 20px;color:#000000;">Work on these problems with us.</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4D4D4D;max-width:560px;margin:0 auto 32px;">Our Summer Research Fellowship trains the next generation of researchers across these risk areas.</p>
+    <a href="fellowship.html" style="font-size:13px;letter-spacing:0.06em;color:#ffffff;background:#800000;padding:14px 30px;">EXPLORE THE FELLOWSHIP →</a>
+  </section>
+  </main>
+  <footer style="background:#404040;width:100%;">
+    <div style="max-width:1430px;margin:0 auto;padding:60px 24px;box-sizing:border-box;">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:32px;">
+        <a href="https://www.uchicago.edu" style="display:block;">
+          <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/uchicago_wordmark.svg" alt="The University of Chicago" style="width:260px;height:auto;display:block;">
+        </a>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
+          <div style="font-size:12px;color:#ffffff;opacity:0.8;">XLab · Existential Risk Laboratory</div>
+          <div style="display:flex;gap:20px;">
+            <a href="https://accessibility.uchicago.edu/" target="_blank" class="footer-link">Accessibility</a>
+            <a href="https://privacy.uchicago.edu/privacy-policy/" target="_blank" class="footer-link">Privacy Policy</a>
+            <a href="mailto:xlab-info@uchicago.edu" class="footer-link">Contact</a>
+          </div>
+          <div style="font-size:10px;color:#ffffff;opacity:0.8;">© University of Chicago · All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
