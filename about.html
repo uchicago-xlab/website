@@ -6,7 +6,9 @@
 <title>About — XLab</title>
 <meta name="description" content="Learn about XLab, the University of Chicago Existential Risk Laboratory: our story, team, faculty advisory committee, and funders.">
 <link href="https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/UChicagoSansSerif.css" rel="stylesheet">
-<script src="./image-slot.js"></script>
+<script src="js/image-slot.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/site.js" defer></script>
 <style>
   body { margin: 0; background: #ffffff; font-family: 'UChicago Sans Serif', Helvetica, Arial, sans-serif; color: #000000; }
   a { color: #800000; text-decoration: none; }
@@ -32,7 +34,7 @@
 <div style="background:#ffffff;color:#000000;min-height:100vh;">
 <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a><div id="scrollbar" style="position:fixed;top:0;left:0;height:3px;background:#800000;z-index:200;width:0%;"></div>
   <div style="background:#800000;width:100%;">
-    <div style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
+    <div class="topbar" style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
       <a href="https://www.uchicago.edu" style="display:flex;align-items:center;gap:10px;" aria-label="The University of Chicago">
         <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg" alt="" style="width:30px;height:25px;display:block;">
         <span style="color:#ffffff;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;">The University of Chicago</span>
@@ -44,13 +46,17 @@
   </div>
   <div style="background:#ffffff;width:100%;padding:24px 0;">
     <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
-      <a href="index.html" style="display:block;">
+      <a href="index.html" class="site-logo" style="display:block;">
         <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
       </a>
     </div>
   </div>
   <nav style="background:#ffffff;width:100%;border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;position:sticky;top:0;z-index:50;">
-    <div style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation menu">
+      <span>MENU</span>
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
       <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
       <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#800000;border-bottom:2px solid #800000;padding-bottom:4px;white-space:nowrap;">ABOUT</a>
       <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">RISK AREAS</a>
@@ -73,8 +79,8 @@
       </div>
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.82) 100%);"></div>
     </div>
-    <img src="brand/xlab-logo-header-mark.png" alt="" style="position:absolute;top:28px;right:40px;width:60px;opacity:0.55;">
-    <div style="position:relative;padding:150px 56px;max-width:1180px;margin:0 auto;width:100%;box-sizing:border-box;">
+    <img src="brand/xlab-logo-header-mark.png" alt="" class="hero-mark" style="position:absolute;top:28px;right:40px;width:60px;opacity:0.55;">
+    <div class="hero-inner" style="position:relative;padding:150px 56px;max-width:1180px;margin:0 auto;width:100%;box-sizing:border-box;">
       <div style="font-size:12px;letter-spacing:0.24em;color:#ffffff;font-weight:600;margin-bottom:32px;">ABOUT US</div>
       <h1 style="font-family:'XOX Stencil',serif;font-weight:400;font-size:clamp(40px,6vw,68px);line-height:1.05;letter-spacing:-0.01em;margin:0 0 28px;max-width:900px;color:#ffffff;text-transform:uppercase;">A coordinating locus for existential risk research.</h1>
       <div style="display:flex;align-items:center;gap:20px;">
@@ -117,10 +123,10 @@
       <h2 style="font-size:26px;font-weight:700;margin:0 0 44px;color:#ffffff;padding:0 48px;">Meet Our Team</h2>
     </div>
     <div style="max-width:1180px;margin:0 auto;padding:0 48px;box-sizing:border-box;">
-      <div style="display:flex;gap:24px;justify-content:center;flex-wrap:nowrap;">
+      <div class="team-row" style="display:flex;gap:24px;justify-content:center;flex-wrap:nowrap;">
         <div style="width:190px;flex-shrink:0;">
           <div class="team-card" tabindex="0" style="position:relative;width:190px;height:232px;border-radius:10px;overflow:hidden;">
-            <image-slot id="team-holz" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
+            <image-slot id="team-holz" src="images/people/daniel-holz.webp" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
             <div class="bio-overlay" style="opacity:0;transform:scale(0.92);transition:opacity 0.25s ease,transform 0.25s ease;position:absolute;inset:0;background-color:#8000008C;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
               <p style="font-size:12.5px;line-height:1.5;color:#ffffff;margin:0;max-height:100%;overflow-y:auto;">Daniel Holz is the founding director of XLab. A professor at the University of Chicago in the Departments of Physics, Astronomy & Astrophysics, the Enrico Fermi Institute, and the Kavli Institute for Cosmological Physics, Holz is a member of the Laser Interferometer Gravitational-Wave Observatory (LIGO) collaboration and researches black holes, gravitational waves, and cosmology. He has received a National Science Foundation CAREER Award, a Quantrell Award for Excellence in Undergraduate Teaching, and as a member of LIGO received the Breakthrough Prize in Fundamental Physics and the Gruber Prize. He was selected as a Kavli Fellow of the National Academy of Sciences and is an APS Fellow. Holz is Chair of the Science and Security Board of the Bulletin of the Atomic Scientists, and in this role helps set the time of the Doomsday Clock.</p>
             </div>
@@ -130,7 +136,7 @@
         </div>
         <div style="width:190px;flex-shrink:0;">
           <div class="team-card" tabindex="0" style="position:relative;width:190px;height:232px;border-radius:10px;overflow:hidden;">
-            <image-slot id="team-rudolph" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
+            <image-slot id="team-rudolph" src="images/people/zephaniah-roe.webp" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
             <div class="bio-overlay" style="opacity:0;transform:scale(0.92);transition:opacity 0.25s ease,transform 0.25s ease;position:absolute;inset:0;background-color:#8000008C;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
               <p style="font-size:12.5px;line-height:1.5;color:#ffffff;margin:0;max-height:100%;overflow-y:auto;">Zephaniah is a founding member of the AI Safety Student Team at UChicago. Zephaniah co-founded Second Look Research this year and will act as the program director and a research manager.</p>
             </div>
@@ -140,7 +146,7 @@
         </div>
         <div style="width:190px;flex-shrink:0;">
           <div class="team-card" tabindex="0" style="position:relative;width:190px;height:232px;border-radius:10px;overflow:hidden;">
-            <image-slot id="team-berzak" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
+            <image-slot id="team-berzak" src="images/people/madeline-berzak.webp" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
             <div class="bio-overlay" style="opacity:0;transform:scale(0.92);transition:opacity 0.25s ease,transform 0.25s ease;position:absolute;inset:0;background-color:#8000008C;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
               <p style="font-size:12.5px;line-height:1.5;color:#ffffff;margin:0;max-height:100%;overflow-y:auto;">Madeline Berzak manages the nuclear risk program at XLab. She holds a Masters in Nonproliferation and Terrorism Studies from the Middlebury Institute of International Studies at Monterey, where she worked for two years at the James Martin Center for Nonproliferation Studies on open-source intelligence contracts regarding North Korea’s nuclear and munitions programs. She also holds a BA in political science and public policy from American University.</p>
             </div>
@@ -150,7 +156,7 @@
         </div>
         <div style="width:190px;flex-shrink:0;">
           <div class="team-card" tabindex="0" style="position:relative;width:190px;height:232px;border-radius:10px;overflow:hidden;">
-            <image-slot id="team-kanuparthi" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
+            <image-slot id="team-kanuparthi" src="images/people/rhea-kanuparthi.webp" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
             <div class="bio-overlay" style="opacity:0;transform:scale(0.92);transition:opacity 0.25s ease,transform 0.25s ease;position:absolute;inset:0;background-color:#8000008C;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
               <p style="font-size:12.5px;line-height:1.5;color:#ffffff;margin:0;max-height:100%;overflow-y:auto;">Rhea Kanuparthi is an undergraduate at the University of Chicago studying Political Science and Mathematics. Her research focuses on the impacts of emerging technology on international security, focusing particularly on nuclear and AI strategy. She was an XLab Summer Research Fellow in 2024.</p>
             </div>
@@ -160,7 +166,7 @@
         </div>
         <div style="width:190px;flex-shrink:0;">
           <div class="team-card" tabindex="0" style="position:relative;width:190px;height:232px;border-radius:10px;overflow:hidden;">
-            <image-slot id="team-vickers" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
+            <image-slot id="team-vickers" src="images/people/madeleine-hoffman.webp" style="width:190px;height:232px;" shape="rect" placeholder="photo"></image-slot>
             <div class="bio-overlay" style="opacity:0;transform:scale(0.92);transition:opacity 0.25s ease,transform 0.25s ease;position:absolute;inset:0;background-color:#8000008C;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
               <p style="font-size:12.5px;line-height:1.5;color:#ffffff;margin:0;max-height:100%;overflow-y:auto;">Supports XLab’s research programming and operations across the lab’s core focus areas.</p>
             </div>
@@ -177,112 +183,112 @@
     <p style="font-size:14px;color:#737373;margin:0 0 36px;max-width:640px;">Scholars from across the academy who guide XLab's research direction.</p>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;">
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-0" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-0" src="images/people/luis-bettencourt.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://eegraduate.uchicago.edu/faculty/luis-bettencourt-phd" target="_blank" style="color:#000000;">Luis Bettencourt</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Professor of Ecology and Evolution; Director, Mansueto Institute for Urban Innovation</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-1" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-1" src="images/people/ethan-bueno-de-mesquita.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://voices.uchicago.edu/ethanbdm/" target="_blank" style="color:#000000;">Ethan Bueno de Mesquita</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Dean and Sydney Stein Professor, Harris School of Public Policy</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-2" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-2" src="images/people/dipesh-chakrabarty.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://history.uchicago.edu/directory/Dipesh-Chakrabarty" target="_blank" style="color:#000000;">Dipesh Chakrabarty</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Lawrence A. Kimpton Distinguished Service Professor of History</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-3" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-3" src="images/people/fred-ciesla.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://geosci.uchicago.edu/people/fred-ciesla/" target="_blank" style="color:#000000;">Fred Ciesla</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Professor, Department of the Geophysical Sciences</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-4" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-4" src="images/people/shannon-dawdy.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://anthropology.uchicago.edu/directory/Shannon-Lee-Dawdy" target="_blank" style="color:#000000;">Shannon Dawdy</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Professor of Anthropology and of Social Sciences</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-5" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-5" src="images/people/james-evans.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://macss.uchicago.edu/directory/James-Evans" target="_blank" style="color:#000000;">James Evans</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Professor of Sociology; Director, Knowledge Lab</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-6" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-6" src="images/people/michael-greenstone.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://economics.uchicago.edu/directory/Michael-Greenstone" target="_blank" style="color:#000000;">Michael Greenstone</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Milton Friedman Distinguished Service Professor in Economics</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-7" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-7" src="images/people/patrick-jagoda.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://cms.uchicago.edu/people/patrick-jagoda" target="_blank" style="color:#000000;">Patrick Jagoda</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Professor, Cinema and Media Studies; Program Director, Media Arts and Design</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-8" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-8" src="images/people/david-keith.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://geosci.uchicago.edu/people/david-keith/" target="_blank" style="color:#000000;">David Keith</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Professor and Founding Faculty Director, Climate Systems Engineering Initiative</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-9" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-9" src="images/people/joseph-masco.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://anthropology.uchicago.edu/directory/Joseph-P-Masco" target="_blank" style="color:#000000;">Joseph Masco</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Professor of Anthropology and of Social Sciences</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-10" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-10" src="images/people/james-theodore-robinson.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://divinity.uchicago.edu/directory/james-theodore-robinson" target="_blank" style="color:#000000;">James Theodore Robinson</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Dean of the Divinity School</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-11" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-11" src="images/people/robert-rosner.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://astro.uchicago.edu/people/robert-rosner.php" target="_blank" style="color:#000000;">Robert Rosner</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">William E. Wrather Distinguished Service Professor</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-12" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-12" src="images/people/victor-veitch.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://stat.uchicago.edu/people/profile/victor-veitch/" target="_blank" style="color:#000000;">Victor Veitch</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Assistant Professor of Statistics and Data Science</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-13" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-13" src="images/people/david-weisbach.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://www.law.uchicago.edu/faculty/weisbach" target="_blank" style="color:#000000;">David Weisbach</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Walter J. Blum Professor of Law</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-14" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-14" src="images/people/rebecca-willett.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://willett.psd.uchicago.edu/" target="_blank" style="color:#000000;">Rebecca Willett</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Professor of Statistics and Computer Science; Director of AI, Data Science Institute</div>
         </div>
       </div>
       <div style="display:flex;gap:14px;align-items:flex-start;">
-        <image-slot id="faculty-15" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="faculty-15" src="images/people/luigi-zingales.webp" style="width: 82px; height: 85px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <div style="font-size:14px;font-weight:700;color:#000000;margin-bottom:4px;"><a href="https://www.chicagobooth.edu/faculty/directory/z/luigi-zingales" target="_blank" style="color:#000000;">Luigi Zingales</a></div>
           <div style="font-size:12.5px;line-height:1.5;color:#4D4D4D;">Robert C. McCormack Distinguished Service Professor, Booth School of Business</div>
