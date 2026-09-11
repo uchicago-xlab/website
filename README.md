@@ -1,8 +1,8 @@
 # XLab website
 
-Static source for the UChicago Existential Risk Laboratory site. Upload the
-contents of this folder (everything except `archive/`) to the web host as-is;
-there is no build step.
+Static source for the UChicago Existential Risk Laboratory site. There is no
+build step. The site is published by GitHub Pages from the `main` branch, so
+merging to `main` deploys it. Preview: https://uchicago-xlab.github.io/website/
 
 ## Layout
 
@@ -16,7 +16,7 @@ there is no build step.
 | `images/` | Page photography and funder logos. |
 | `images/people/` | Team, faculty, and program headshots. |
 | `images/fellows/` | Headshots for the Past Fellows' Work page. |
-| `archive/` | Files kept for reference that the site does not use. See `archive/README.md`. Do not upload. |
+| `files/` | PDFs linked from the site, kept at the same paths they had on the old xrisk.uchicago.edu site so existing links keep working. |
 
 ## Editing notes
 
