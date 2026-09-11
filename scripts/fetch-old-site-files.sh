@@ -9,18 +9,23 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-missing=0
+failed=$(mktemp)
 grep -ohE 'https://xrisk\.uchicago\.edu/files/[^"]+\.pdf' *.html | sort -u | while read -r url; do
   path="${url#https://xrisk.uchicago.edu/}"
   if [ -s "$path" ]; then echo "have    $path"; continue; fi
   mkdir -p "$(dirname "$path")"
-  if curl -fsSL --retry 3 -o "$path" "$url"; then
+  if curl -fsSL --retry 3 -A "Mozilla/5.0 (xlab-site-migration)" -o "$path" "$url"; then
     echo "fetched $path"
   else
-    echo "FAILED  $url" >&2; rm -f "$path"; missing=1
+    echo "FAILED  $url" | tee -a "$failed" >&2; rm -f "$path"
   fi
 done
 
 echo
 echo "Not a PDF, needs a new home on the new site:"
 grep -ohE 'https://xrisk\.uchicago\.edu/[^"]+' *.html | grep -v '\.pdf$' | sort -u
+
+if [ -s "$failed" ]; then
+  echo; echo "$(wc -l < "$failed") file(s) could not be fetched (see FAILED lines above)." >&2
+  exit 1
+fi

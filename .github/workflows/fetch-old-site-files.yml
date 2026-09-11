@@ -1,0 +1,38 @@
+# Copies the PDFs the site links to on the old xrisk.uchicago.edu host into
+# files/ and commits them. Run it from the Actions tab ("Run workflow") while
+# the old site is still online. Safe to re-run: files already present are skipped.
+name: Fetch old-site PDFs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download PDFs from xrisk.uchicago.edu
+        id: fetch
+        continue-on-error: true
+        run: bash scripts/fetch-old-site-files.sh
+
+      - name: Commit whatever was fetched
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add files
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+            exit 0
+          fi
+          git commit -m "Add PDFs copied from the old xrisk.uchicago.edu site"
+          git push
+
+      - name: Report
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "::warning::Some files could not be fetched. Open the 'Download PDFs' step above and look for FAILED lines."
