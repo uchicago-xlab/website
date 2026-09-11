@@ -1,0 +1,149 @@
+/* ==========================================================================
+   XLab site — shared responsive layer
+   --------------------------------------------------------------------------
+   The pages are built with inline styles for a desktop layout. This sheet
+   adds the mobile/tablet behaviour on top of them, so most rules carry
+   !important to win over the inline declarations. Two breakpoints:
+     • ≤ 900px  tablet  — 3/4-column grids become 2 columns, mobile nav
+     • ≤ 640px  phone   — everything single column, tighter spacing
+   ========================================================================== */
+
+html { -webkit-text-size-adjust: 100%; }
+img, video { max-width: 100%; }
+
+/* ----- Mobile nav toggle (hidden on desktop) ----- */
+.nav-toggle {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #ffffff;
+  border: 0;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #000000;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.nav-toggle-icon { display: inline-flex; flex-direction: column; gap: 4px; width: 22px; }
+.nav-toggle-icon span { display: block; height: 2px; background: #800000; transition: transform 0.2s ease, opacity 0.2s ease; }
+.nav-open .nav-toggle-icon span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-open .nav-toggle-icon span:nth-child(2) { opacity: 0; }
+.nav-open .nav-toggle-icon span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ==========================================================================
+   Tablet and below
+   ========================================================================== */
+@media (max-width: 900px) {
+  /* --- Navigation collapses behind a MENU button --- */
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 0 8px 12px !important;
+    border-top: 1px solid #D9D9D9;
+  }
+  .nav-open .nav-links { display: flex !important; }
+  .nav-links > a,
+  .nav-links .nav-dropdown > a {
+    display: block !important;
+    padding: 14px 12px !important;
+    border-bottom: 0 !important;
+    text-align: left;
+  }
+  .nav-links .nav-dropdown { width: 100%; }
+  .nav-links .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 0 6px 24px !important;
+    min-width: 0 !important;
+  }
+  .nav-links .dropdown-menu a { color: #4D4D4D !important; }
+  .nav-links > a[href*="lists.uchicago.edu"] { margin: 10px 12px 0 !important; text-align: center; }
+
+  /* --- Page gutters --- */
+  main section { padding-left: 32px !important; padding-right: 32px !important; }
+  main [style*="padding:0 48px"] { padding-left: 0 !important; padding-right: 0 !important; }
+  .hero-inner { padding-left: 32px !important; padding-right: 32px !important; }
+
+  /* --- Grids --- */
+  main [style*="repeat(4,1fr)"],
+  main [style*="repeat(3,1fr)"],
+  main [style*="1.3fr 1fr 1fr"] { grid-template-columns: repeat(2, 1fr) !important; }
+  main [style*="1fr 1.1fr"],
+  main [style*="1.1fr 1fr"],
+  main [style*="grid-template-columns:1fr 1fr;gap:56px"] { grid-template-columns: 1fr !important; }
+
+  /* --- Team cards wrap instead of overflowing --- */
+  .team-row { flex-wrap: wrap !important; }
+}
+
+/* ==========================================================================
+   Phone
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* --- Header --- */
+  .site-logo img { height: 44px !important; }
+  .topbar { padding-left: 16px !important; padding-right: 16px !important; }
+  .topbar span { font-size: 11px; }
+  .nav-toggle { padding-left: 16px; padding-right: 16px; }
+
+  /* --- Gutters and vertical rhythm --- */
+  main section { padding-left: 20px !important; padding-right: 20px !important; }
+  main section[style*="padding:88px"],  main section[style*="padding: 88px"],
+  main section[style*="padding:96px"],  main section[style*="padding:100px"],
+  main section[style*="padding:80px"],  main section[style*="padding: 76px"] {
+    padding-top: 56px !important; padding-bottom: 56px !important;
+  }
+  main section[style*="padding:60px 48px 80px"] { padding-bottom: 56px !important; }
+  main section[style*="padding:48px 48px 100px"] { padding-bottom: 64px !important; }
+  main section[style*="min-height"] { min-height: 360px !important; }
+  .hero-inner { padding: 64px 20px 48px !important; }
+  /* The stencil headlines have a 36-48px floor inline; that clips words like
+     "CATASTROPHE." on a phone, so scale with the viewport instead. */
+  main h1 { font-size: clamp(24px, 8vw, 48px) !important; }
+  .hero-mark { top: 16px !important; right: 16px !important; width: 40px !important; }
+
+  /* --- Every grid goes single column (except the numbered nuclear list) --- */
+  main [style*="grid-template-columns"]:not([style*="40px 1fr"]) { grid-template-columns: 1fr !important; }
+  #fellow-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+
+  /* --- News timeline: single column, no centre line --- */
+  .timeline-line { display: none !important; }
+  main .timeline-row { grid-template-columns: 1fr !important; gap: 0 !important; margin-bottom: 32px !important; padding-left: 18px; border-left: 2px solid #D9D9D9; }
+  main .timeline-row > div { grid-column: 1 !important; text-align: left !important; }
+  main .timeline-row > div:empty,
+  main .timeline-row > div[style*="justify-content:center"] { display: none !important; }
+
+  /* --- Side-by-side rows stack --- */
+  .stack-sm { flex-direction: column !important; align-items: flex-start !important; }
+  .stack-sm > [style*="width:220px"] { width: auto !important; }
+
+  /* --- Team cards: two per row, fluid width --- */
+  .team-row { gap: 20px 16px !important; justify-content: center !important; }
+  .team-row > div { width: calc(50% - 8px) !important; }
+  .team-card { width: 100% !important; }
+  .team-card image-slot { width: 100% !important; }
+
+  /* --- People circles on the AI page --- */
+  main image-slot[style*="width: 192px"] { width: 150px !important; height: 150px !important; }
+
+  /* --- Fellowship stat --- */
+  main [style*="font-size: 72px"] { font-size: 56px !important; width: auto !important; }
+
+  /* --- Footer stacks --- */
+  footer [style*="justify-content:space-between"] { flex-direction: column !important; align-items: flex-start !important; }
+  footer [style*="align-items:flex-end"] { align-items: flex-start !important; }
+  footer img { width: 200px !important; }
+  footer [style*="padding:60px 24px"] { padding: 40px 20px !important; }
+}

@@ -6,7 +6,9 @@
 <title>Past Fellows' Work — XLab</title>
 <meta name="description" content="Browse research papers and projects produced by XLab Summer Research Fellows since 2022.">
 <link href="https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/UChicagoSansSerif.css" rel="stylesheet">
-<script src="./image-slot.js"></script>
+<script src="js/image-slot.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/site.js" defer></script>
 <style>
   body { margin: 0; background: #ffffff; font-family: 'UChicago Sans Serif', Helvetica, Arial, sans-serif; color: #000000; }
   a { color: #800000; text-decoration: none; }
@@ -28,7 +30,7 @@
 <div style="background:#ffffff;color:#000000;min-height:100vh;">
 <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a>
   <div style="background:#800000;width:100%;">
-    <div style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
+    <div class="topbar" style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
       <a href="https://www.uchicago.edu" style="display:flex;align-items:center;gap:10px;" aria-label="The University of Chicago">
         <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg" alt="" style="width:30px;height:25px;display:block;">
         <span style="color:#ffffff;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;">The University of Chicago</span>
@@ -40,13 +42,17 @@
   </div>
   <div style="background:#ffffff;width:100%;padding:24px 0;">
     <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
-      <a href="index.html" style="display:block;">
+      <a href="index.html" class="site-logo" style="display:block;">
         <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
       </a>
     </div>
   </div>
   <nav style="background:#ffffff;width:100%;border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;position:sticky;top:0;z-index:50;">
-    <div style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation menu">
+      <span>MENU</span>
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
       <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
       <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">ABOUT</a>
       <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">RISK AREAS</a>
@@ -83,7 +89,7 @@
     <div id="fellow-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-yixiong-hao" src="uploads/Screenshot-2026-05-15-at-12.16.47.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-yixiong-hao" src="images/fellows/Screenshot-2026-05-15-at-12.16.47.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -99,7 +105,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-will-anderson" src="uploads/Screenshot-2026-05-15-at-12.17.30.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-will-anderson" src="images/fellows/Screenshot-2026-05-15-at-12.17.30.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -115,7 +121,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-jo-jiao" src="uploads/Screenshot-2026-05-15-at-12.19.20.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-jo-jiao" src="images/fellows/Screenshot-2026-05-15-at-12.19.20.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -131,7 +137,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-daniel-allen" src="uploads/Screenshot-2026-05-15-at-12.24.07.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-daniel-allen" src="images/fellows/Screenshot-2026-05-15-at-12.24.07.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -147,7 +153,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-samara-shaz" src="uploads/Screenshot-2026-05-15-at-12.22.04.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-samara-shaz" src="images/fellows/Screenshot-2026-05-15-at-12.22.04.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -163,7 +169,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-olivia-long" src="uploads/Screenshot-2026-05-15-at-12.23.09.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-olivia-long" src="images/fellows/Screenshot-2026-05-15-at-12.23.09.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -179,7 +185,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-atharva-nihlani" src="uploads/Screenshot-2026-05-15-at-12.24.22.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-atharva-nihlani" src="images/fellows/Screenshot-2026-05-15-at-12.24.22.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -195,7 +201,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-edmund-bu" src="uploads/Screenshot-2026-05-15-at-12.25.01.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-edmund-bu" src="images/fellows/Screenshot-2026-05-15-at-12.25.01.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -211,7 +217,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-yilin-huang" src="uploads/Screenshot-2026-05-15-at-12.25.57.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-yilin-huang" src="images/fellows/Screenshot-2026-05-15-at-12.25.57.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -227,7 +233,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-jay-kim" src="uploads/Screenshot-2026-05-15-at-12.27.54.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-jay-kim" src="images/fellows/Screenshot-2026-05-15-at-12.27.54.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -243,7 +249,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-aditya-singh" src="uploads/1764690153233.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-aditya-singh" src="images/fellows/1764690153233.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -259,7 +265,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-yerin-yoon" src="uploads/Screenshot-2026-05-15-at-12.25.38.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-yerin-yoon" src="images/fellows/Screenshot-2026-05-15-at-12.25.38.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -275,7 +281,7 @@
       </div>
       <div class="fellow-card visible" data-year="2025">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2025-jacopo-minniti" src="uploads/Screenshot-2026-05-15-at-12.27.18.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2025-jacopo-minniti" src="images/fellows/Screenshot-2026-05-15-at-12.27.18.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2025</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -291,7 +297,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-audrey-weckwerth" src="uploads/Screenshot-2024-10-30-at-13.53.06.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-audrey-weckwerth" src="images/fellows/Screenshot-2024-10-30-at-13.53.06.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -307,7 +313,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-amina-anowara" src="uploads/Screenshot-2024-10-30-at-13.58.47.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-amina-anowara" src="images/fellows/Screenshot-2024-10-30-at-13.58.47.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -323,7 +329,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-aryan-shrivastava" src="uploads/final.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-aryan-shrivastava" src="images/fellows/final.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -339,7 +345,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-rhea-kanuparthi" src="uploads/kanuparthi_resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-rhea-kanuparthi" src="images/fellows/kanuparthi_resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -355,7 +361,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-simon-siskel" src="uploads/siskel-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-simon-siskel" src="images/fellows/siskel-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -371,7 +377,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-anastasia-wei" src="uploads/anastasia-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-anastasia-wei" src="images/fellows/anastasia-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -387,7 +393,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-sanyu-rajakumar" src="uploads/Sanyu-Resized.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-sanyu-rajakumar" src="images/fellows/Sanyu-Resized.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -403,7 +409,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-sophia-lloyd-george" src="uploads/sophie-LG-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-sophia-lloyd-george" src="images/fellows/sophie-LG-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -419,7 +425,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-kevin-li" src="uploads/kevin-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-kevin-li" src="images/fellows/kevin-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -435,7 +441,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-lavinia-cavalet" src="uploads/cavalet-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-lavinia-cavalet" src="images/fellows/cavalet-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -451,7 +457,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-james-rosenberger" src="uploads/james-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-james-rosenberger" src="images/fellows/james-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -467,7 +473,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-helena-tran" src="uploads/Helena-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-helena-tran" src="images/fellows/Helena-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -483,7 +489,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-robert-shin" src="uploads/shin-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-robert-shin" src="images/fellows/shin-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -499,7 +505,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-melody-gui" src="uploads/gui-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-melody-gui" src="images/fellows/gui-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -515,7 +521,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-abhay-katoch" src="uploads/katoch-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-abhay-katoch" src="images/fellows/katoch-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -531,7 +537,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-jibang-wu" src="uploads/jibang-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-jibang-wu" src="images/fellows/jibang-resize.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -547,7 +553,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-austin-coffey" src="uploads/Screenshot-2024-10-30-at-14.03.07.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-austin-coffey" src="images/fellows/Screenshot-2024-10-30-at-14.03.07.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -563,7 +569,7 @@
       </div>
       <div class="fellow-card visible" data-year="2024">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2024-julien-benchek" src="uploads/Benchek_resized.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2024-julien-benchek" src="images/fellows/Benchek_resized.png" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2024</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -579,7 +585,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-allison-huang" src="uploads/allison-30eacb2c7014569d.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-allison-huang" src="images/fellows/allison-30eacb2c7014569d.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -595,7 +601,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-anisha-hisham" src="uploads/anisha-9d2f64617782bdbe.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-anisha-hisham" src="images/fellows/anisha-9d2f64617782bdbe.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -611,7 +617,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-carter-teplica" src="uploads/carter-f508bc8d11494313.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-carter-teplica" src="images/fellows/carter-f508bc8d11494313.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -627,7 +633,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-coleman-snell" src="uploads/coleman-468f64fbde087fe3.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-coleman-snell" src="images/fellows/coleman-468f64fbde087fe3.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -643,7 +649,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-duc-nguyen" src="uploads/duc-77ae8e53207c5541.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-duc-nguyen" src="images/fellows/duc-77ae8e53207c5541.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -659,7 +665,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-josephine-dodge" src="uploads/josephine-da2716d6637de008.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-josephine-dodge" src="images/fellows/josephine-da2716d6637de008.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -675,7 +681,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-joshua-payne" src="uploads/joshua-0c75e9c2d32d507f.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-joshua-payne" src="images/fellows/joshua-0c75e9c2d32d507f.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -691,7 +697,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-julian-baldwin" src="uploads/julian-1efe9794c44f0370.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-julian-baldwin" src="images/fellows/julian-1efe9794c44f0370.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -707,7 +713,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-laura-messner" src="uploads/laura-9b9733251f6ab19c.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-laura-messner" src="images/fellows/laura-9b9733251f6ab19c.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -723,7 +729,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-miles-wang" src="uploads/miles-f17b4e384cdbe009.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-miles-wang" src="images/fellows/miles-f17b4e384cdbe009.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -739,7 +745,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-mishaal-lakhani" src="uploads/mishaal-c1ec88fbb6fea985.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-mishaal-lakhani" src="images/fellows/mishaal-c1ec88fbb6fea985.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -755,7 +761,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-oksana-vickers" src="uploads/oksana-c94aea13c3de2a0b.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-oksana-vickers" src="images/fellows/oksana-c94aea13c3de2a0b.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -771,7 +777,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-shuyuan-wang" src="uploads/lily-573d381c273170a9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-shuyuan-wang" src="images/fellows/lily-573d381c273170a9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -787,7 +793,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-stephan-llerena" src="uploads/stephan-8bfd027861f87cf9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-stephan-llerena" src="images/fellows/stephan-8bfd027861f87cf9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -803,7 +809,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-vincent-li" src="uploads/vincent-05c466ae94577695.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-vincent-li" src="images/fellows/vincent-05c466ae94577695.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -819,7 +825,7 @@
       </div>
       <div class="fellow-card visible" data-year="2023">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2023-yuxin-ji" src="uploads/jessica-de49c6560b7d073e.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2023-yuxin-ji" src="images/fellows/jessica-de49c6560b7d073e.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2023</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -835,7 +841,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-sandro-del-rivo" src="uploads/sandro-cefcc9b9cbe2a930.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-sandro-del-rivo" src="images/fellows/sandro-cefcc9b9cbe2a930.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -851,7 +857,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-soren-dunn" src="uploads/soren-b58c98ac2f429044.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-soren-dunn" src="images/fellows/soren-b58c98ac2f429044.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -867,7 +873,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-grant-harris" src="uploads/grant-267f96c590d0a9d9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-grant-harris" src="images/fellows/grant-267f96c590d0a9d9.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -883,7 +889,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-sudhamshu-hosamane" src="uploads/sudhamshu-7446a6b2e78e67c8.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-sudhamshu-hosamane" src="images/fellows/sudhamshu-7446a6b2e78e67c8.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -899,7 +905,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-henry-josephson" src="uploads/henry-0efa75fd41ace392.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-henry-josephson" src="images/fellows/henry-0efa75fd41ace392.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -915,7 +921,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-theo-ko" src="uploads/theo-465dccb15f371bbf.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-theo-ko" src="images/fellows/theo-465dccb15f371bbf.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -931,7 +937,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-nicole-mateo" src="uploads/nicole-ea24c682d033d924.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-nicole-mateo" src="images/fellows/nicole-ea24c682d033d924.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -947,7 +953,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-jack-wippell" src="uploads/jack-d567cb531f3dc7c4.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-jack-wippell" src="images/fellows/jack-d567cb531f3dc7c4.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -963,7 +969,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-andrew-yang" src="uploads/andrew-3d68890e8688368d.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-andrew-yang" src="images/fellows/andrew-3d68890e8688368d.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">
@@ -979,7 +985,7 @@
       </div>
       <div class="fellow-card visible" data-year="2022">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-          <image-slot id="fellow-2022-freddie-yang" src="uploads/freddie-cbacc3a5aa37934a.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
+          <image-slot id="fellow-2022-freddie-yang" src="images/fellows/freddie-cbacc3a5aa37934a.jpg" style="width:100%;height:100%;" shape="rect" placeholder="Fellow headshot"></image-slot>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.85) 100%);pointer-events:none;"></div>
           <div style="position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:0.08em;color:#ffffff;font-weight:700;opacity:0.8;pointer-events:none;">2022</div>
           <div style="position:absolute;left:14px;right:14px;bottom:12px;color:#ffffff;">

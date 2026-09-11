@@ -6,7 +6,9 @@
 <title>Risk Areas — XLab</title>
 <meta name="description" content="XLab's four fronts of catastrophic risk: artificial intelligence, nuclear weapons, biosecurity, and climate.">
 <link href="https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/UChicagoSansSerif.css" rel="stylesheet">
-<script src="./image-slot.js"></script>
+<script src="js/image-slot.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/site.js" defer></script>
 <style>
   body { margin: 0; background: #ffffff; font-family: 'UChicago Sans Serif', Helvetica, Arial, sans-serif; color: #000000; }
   a { color: #800000; text-decoration: none; }
@@ -30,7 +32,7 @@
 <div style="background:#ffffff;color:#000000;min-height:100vh;">
 <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a>
   <div style="background:#800000;width:100%;">
-    <div style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
+    <div class="topbar" style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
       <a href="https://www.uchicago.edu" style="display:flex;align-items:center;gap:10px;" aria-label="The University of Chicago">
         <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg" alt="" style="width:30px;height:25px;display:block;">
         <span style="color:#ffffff;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;">The University of Chicago</span>
@@ -42,13 +44,17 @@
   </div>
   <div style="background:#ffffff;width:100%;padding:24px 0;">
     <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
-      <a href="index.html" style="display:block;">
+      <a href="index.html" class="site-logo" style="display:block;">
         <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
       </a>
     </div>
   </div>
   <nav style="background:#ffffff;width:100%;border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;position:sticky;top:0;z-index:50;">
-    <div style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation menu">
+      <span>MENU</span>
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
       <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
       <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">ABOUT</a>
       <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#800000;border-bottom:2px solid #800000;padding-bottom:4px;white-space:nowrap;">RISK AREAS</a>
@@ -71,8 +77,8 @@
       </div>
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.82) 100%);"></div>
     </div>
-    <img src="brand/xlab-logo-header-mark.png" alt="" style="position:absolute;top:28px;right:40px;width:60px;opacity:0.55;">
-    <div style="position:relative;padding:130px 56px;max-width:1180px;margin:0 auto;width:100%;box-sizing:border-box;">
+    <img src="brand/xlab-logo-header-mark.png" alt="" class="hero-mark" style="position:absolute;top:28px;right:40px;width:60px;opacity:0.55;">
+    <div class="hero-inner" style="position:relative;padding:130px 56px;max-width:1180px;margin:0 auto;width:100%;box-sizing:border-box;">
       <div style="font-size:12px;letter-spacing:0.24em;color:#ffffff;font-weight:600;margin-bottom:32px;">RISK AREAS</div>
       <h1 style="font-family:'XOX Stencil',serif;font-weight:400;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:-0.01em;margin:0 0 28px;max-width:860px;color:#ffffff;text-transform:uppercase;">Four fronts of catastrophic risk.</h1>
       <div style="display:flex;align-items:center;gap:20px;">
