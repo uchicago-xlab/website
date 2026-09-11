@@ -19,7 +19,7 @@
   .nav-dropdown { position: relative; }
   .nav-dropdown .dropdown-menu { opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
   .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu { opacity: 1; pointer-events: auto; }
-  .dropdown-menu a:hover { background: #F5F5F5; text-decoration: none; }
+  .dropdown-menu a:hover { background: #D9D9D9; text-decoration: none; }
   .footer-link { font-size: 11px; color: #ffffff; opacity: 0.8; text-decoration: underline dotted; }
   .footer-link:hover { opacity: 1; text-decoration: underline solid; }
   .skip-link:focus { left: 16px !important; top: 16px !important; }
@@ -37,9 +37,14 @@
         <img src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg" alt="" style="width:30px;height:25px;display:block;">
         <span style="color:#ffffff;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;">The University of Chicago</span>
       </a>
-      <button type="button" aria-label="Search uchicago.edu" style="background:none;border:none;padding:4px;cursor:pointer;display:flex;align-items:center;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </button>
+      <form class="site-search" role="search" action="https://www.google.com/search" method="get" style="display:flex;align-items:center;gap:6px;margin:0;">
+        <input id="site-search-q" name="q" type="search" placeholder="Search" aria-label="Search this site" required style="width:130px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,0.6);color:#ffffff;font:inherit;font-size:0.8rem;padding:4px 2px;">
+        <!-- Scopes results to the live domain. Update if the site moves off xrisk.uchicago.edu. -->
+        <input type="hidden" name="as_sitesearch" value="xrisk.uchicago.edu">
+        <button type="submit" aria-label="Search" style="background:none;border:none;padding:4px;cursor:pointer;display:flex;align-items:center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </form>
     </div>
   </div>
   <div style="background:#ffffff;width:100%;padding:24px 0;">
@@ -65,8 +70,8 @@
           <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Past Fellows' Work</a>
         </div>
       </div>
-      <a href="https://nobelassembly.org/" target="_blank" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
-      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
     </div>
   </nav>
   <main id="main-content">
@@ -133,17 +138,17 @@
     <div style="max-width:1180px;margin:0 auto;">
       <h2 style="font-size:24px;font-weight:700;margin:0 0 40px;color:#000000;">More on These Risks</h2>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-        <a href="https://thebulletin.org/2025/10/a-bulletin-resource-guide-to-viewing-a-house-of-dynamite/" target="_blank" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
+        <a href="https://thebulletin.org/2025/10/a-bulletin-resource-guide-to-viewing-a-house-of-dynamite/" target="_blank" rel="noopener" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
           <div style="font-size:11px;letter-spacing:0.1em;color:#800000;font-weight:700;margin-bottom:10px;">SCREENING</div>
           <h3 style="font-size:16px;font-weight:700;margin:0 0 10px;color:#000000;">A House of Dynamite</h3>
           <p style="font-size:13.5px;line-height:1.55;color:#4D4D4D;margin:0;">With the Bulletin of the Atomic Scientists, XLab hosted a screening of Kathryn Bigelow's nuclear-war thriller.</p>
         </a>
-        <a href="https://thebulletin.org/doomsday-clock/" target="_blank" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
+        <a href="https://thebulletin.org/doomsday-clock/" target="_blank" rel="noopener" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
           <div style="font-size:11px;letter-spacing:0.1em;color:#800000;font-weight:700;margin-bottom:10px;">PANEL</div>
           <h3 style="font-size:16px;font-weight:700;margin:0 0 10px;color:#000000;">The Doomsday Clock</h3>
           <p style="font-size:13.5px;line-height:1.55;color:#4D4D4D;margin:0;">A panel discussion on the Bulletin of the Atomic Scientists' annual Doomsday Clock announcement.</p>
         </a>
-        <a href="https://xrisk.uchicago.edu/files/2026/03/Rethinking-Priorities-for-Frontier-AI-Security.pdf" target="_blank" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
+        <a href="https://xrisk.uchicago.edu/files/2026/03/Rethinking-Priorities-for-Frontier-AI-Security.pdf" target="_blank" rel="noopener" style="display:block;background:#ffffff;border:1px solid #D9D9D9;padding:26px;">
           <div style="font-size:11px;letter-spacing:0.1em;color:#800000;font-weight:700;margin-bottom:10px;">RESEARCH</div>
           <h3 style="font-size:16px;font-weight:700;margin:0 0 10px;color:#000000;">Rethinking Priorities for Frontier AI Security</h3>
           <p style="font-size:13.5px;line-height:1.55;color:#4D4D4D;margin:0;">A 2025 fellow's paper on prioritization in frontier AI security research.</p>
@@ -166,8 +171,8 @@
         <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
           <div style="font-size:12px;color:#ffffff;opacity:0.8;">XLab · Existential Risk Laboratory</div>
           <div style="display:flex;gap:20px;">
-            <a href="https://accessibility.uchicago.edu/" target="_blank" class="footer-link">Accessibility</a>
-            <a href="https://privacy.uchicago.edu/privacy-policy/" target="_blank" class="footer-link">Privacy Policy</a>
+            <a href="https://accessibility.uchicago.edu/" target="_blank" rel="noopener" class="footer-link">Accessibility</a>
+            <a href="https://privacy.uchicago.edu/privacy-policy/" target="_blank" rel="noopener" class="footer-link">Privacy Policy</a>
             <a href="mailto:xlab-info@uchicago.edu" class="footer-link">Contact</a>
           </div>
           <div style="font-size:10px;color:#ffffff;opacity:0.8;">© University of Chicago · All Rights Reserved</div>
