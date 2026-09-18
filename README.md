@@ -27,3 +27,9 @@ merging to `main` deploys it. Preview: https://uchicago-xlab.github.io/website/
   photo (no file was available when the site was assembled).
 - Responsive rules live in `css/site.css` and override the inline desktop
   styles with `!important`. Breakpoints are 900px (tablet) and 640px (phone).
+
+## After changing css/site.css or js/site.js
+
+Browsers and GitHub's CDN cache those files by name. Bump the `?v=` version
+on the `<link>` and `<script>` tags in every page (they all carry the same
+value) so visitors pick up the new file instead of a cached copy.
