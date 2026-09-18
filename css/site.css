@@ -49,14 +49,24 @@
 html { -webkit-text-size-adjust: 100%; }
 img, video { max-width: 100%; }
 
-/* ----- Navigation ----- */
+/* ----- Navigation -----
+   Light grey bar (#fafafa is the guideline's own navigation colour), generous
+   height, and a hover state that bolds, underlines and slightly enlarges the
+   item. The bold ghost inside .nav-label reserves the bold width up front so
+   neighbouring items do not shift on hover. ----- */
+nav { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
 .nav-item {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 18px 4px 14px;
+  padding: 26px 6px 20px;
   border-bottom: 4px solid transparent;
   font-size: 14px; letter-spacing: 0.02em; color: #000000; white-space: nowrap;
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
-.nav-item:hover, .nav-item:focus-visible { text-decoration: none; border-bottom-color: #800000; }
+.nav-label { display: inline-block; text-align: center; }
+.nav-label::after { content: attr(data-label); display: block; height: 0; overflow: hidden; visibility: hidden; font-weight: 700; }
+.nav-item:hover, .nav-item:focus-visible {
+  text-decoration: none; font-weight: 700; border-bottom-color: #800000; transform: scale(1.06);
+}
 .nav-item.active { color: #800000; border-bottom-color: #800000; }
 .nav-item svg { flex-shrink: 0; }
 .nav-cta {
@@ -66,6 +76,7 @@ img, video { max-width: 100%; }
 }
 .nav-cta:hover { text-decoration: underline; }
 .dropdown-menu a:hover { background: #D9D9D9; }
+@media (prefers-reduced-motion: reduce) { .nav-item { transition: none; } .nav-item:hover { transform: none; } }
 
 /* ----- Mobile nav toggle (hidden on desktop) ----- */
 .nav-toggle {
@@ -75,7 +86,7 @@ img, video { max-width: 100%; }
   justify-content: space-between;
   gap: 12px;
   padding: 14px 20px;
-  background: #ffffff;
+  background: #fafafa;
   border: 0;
   font: inherit;
   font-size: 13px;
@@ -109,6 +120,7 @@ img, video { max-width: 100%; }
   .nav-links > a,
   .nav-links .nav-dropdown > a {
     display: block !important;
+    transform: none !important;
     padding: 14px 12px !important;
     border-bottom: 0 !important;
     text-align: left;
