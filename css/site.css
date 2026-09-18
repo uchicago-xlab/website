@@ -1,4 +1,42 @@
 /* ==========================================================================
+   Brand fonts
+   --------------------------------------------------------------------------
+   The University's stylesheets register one family PER WEIGHT
+   ("UChicagoSansSerif-Bold", "UChicagoSerif", ...), so a plain
+   font-family: 'UChicago Sans Serif' never matched and the pages fell back to
+   Helvetica/Arial. These declarations map the names the pages use onto the
+   official font files so weights and italics resolve normally.
+   ========================================================================== */
+@font-face { font-family: 'UChicago Sans Serif'; font-weight: 300; font-style: normal; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-Light.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-Light.woff') format('woff'); }
+@font-face { font-family: 'UChicago Sans Serif'; font-weight: 300; font-style: italic; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-LightItalic.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-LightItalic.woff') format('woff'); }
+@font-face { font-family: 'UChicago Sans Serif'; font-weight: 400; font-style: normal; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-Regular.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-Regular.woff') format('woff'); }
+@font-face { font-family: 'UChicago Sans Serif'; font-weight: 400; font-style: italic; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-RegularItalic.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-RegularItalic.woff') format('woff'); }
+@font-face { font-family: 'UChicago Sans Serif'; font-weight: 600; font-style: normal; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-SemiBold.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-SemiBold.woff') format('woff'); }
+@font-face { font-family: 'UChicago Sans Serif'; font-weight: 600; font-style: italic; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-SemiBoldItalic.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-SemiBoldItalic.woff') format('woff'); }
+@font-face { font-family: 'UChicago Sans Serif'; font-weight: 700; font-style: normal; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-Bold.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-Bold.woff') format('woff'); }
+@font-face { font-family: 'UChicago Sans Serif'; font-weight: 700; font-style: italic; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-BoldItalic.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-sans-serif/UChicagoSansSerif-BoldItalic.woff') format('woff'); }
+@font-face { font-family: 'UChicago Serif'; font-weight: 400; font-style: normal; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-Regular.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-Regular.woff') format('woff'); }
+@font-face { font-family: 'UChicago Serif'; font-weight: 400; font-style: italic; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-RegularItalic.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-RegularItalic.woff') format('woff'); }
+@font-face { font-family: 'UChicago Serif'; font-weight: 600; font-style: normal; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-SemiBold.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-SemiBold.woff') format('woff'); }
+@font-face { font-family: 'UChicago Serif'; font-weight: 600; font-style: italic; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-SemiBoldItalic.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-SemiBoldItalic.woff') format('woff'); }
+@font-face { font-family: 'UChicago Serif'; font-weight: 700; font-style: normal; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-Bold.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-Bold.woff') format('woff'); }
+@font-face { font-family: 'UChicago Serif'; font-weight: 700; font-style: italic; font-display: swap;
+  src: url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-BoldItalic.woff2') format('woff2'), url('https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/fonts/uchicago-serif/UChicagoSerif-BoldItalic.woff') format('woff'); }
+
+/* ==========================================================================
    XLab site — shared responsive layer
    --------------------------------------------------------------------------
    The pages are built with inline styles for a desktop layout. This sheet
@@ -109,7 +147,7 @@ img, video { max-width: 100%; }
   main section[style*="padding:48px 48px 100px"] { padding-bottom: 64px !important; }
   main section[style*="min-height"] { min-height: 360px !important; }
   .hero-inner { padding: 64px 20px 48px !important; }
-  /* The stencil headlines have a 36-48px floor inline; that clips words like
+  /* Headlines have a 34-48px floor inline; that clips words like
      "CATASTROPHE." on a phone, so scale with the viewport instead. */
   main h1 { font-size: clamp(24px, 8vw, 48px) !important; }
   .hero-mark { top: 16px !important; right: 16px !important; width: 40px !important; }
