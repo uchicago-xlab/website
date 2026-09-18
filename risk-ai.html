@@ -14,7 +14,6 @@
   a { color: #800000; text-decoration: none; }
   a:hover { text-decoration: underline; }
   ::selection { background: #800000; color: #ffffff; }
-  @font-face { font-family:'XOX Stencil'; src:url('brand/fonts/XOX-Stencil-v2.otf') format('opentype'); font-display:swap; }
   .nav-dropdown { position: relative; }
   .nav-dropdown .dropdown-menu { opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
   .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu { opacity: 1; pointer-events: auto; }
@@ -43,10 +42,10 @@
       </form>
     </div>
   </div>
-  <div style="background:#ffffff;width:100%;padding:24px 0;">
+  <div style="background:#ffffff;width:100%;padding:40px 0;">
     <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
       <a href="index.html" class="site-logo" style="display:block;">
-        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
+        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:75px;display:block;">
       </a>
     </div>
   </div>
@@ -55,19 +54,26 @@
       <span>MENU</span>
       <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
-    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
-      <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
-      <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">ABOUT</a>
-      <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#800000;border-bottom:2px solid #800000;padding-bottom:4px;white-space:nowrap;">RISK AREAS</a>
+    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:stretch;justify-content:center;gap:40px;padding:0 24px;flex-wrap:wrap;box-sizing:border-box;">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="about.html" class="nav-item">About Us</a>
       <div class="nav-dropdown">
-        <a href="fellowship.html" tabindex="0" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;display:inline-block;">FELLOWSHIP</a>
-        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:210px;padding:6px;z-index:60;">
+        <a href="fellowship.html" tabindex="0" class="nav-item">Summer Research Fellowship <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:230px;padding:6px;z-index:60;">
           <a href="fellowship.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Program Overview</a>
           <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Past Fellows' Work</a>
         </div>
       </div>
-      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
-      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" class="nav-item">Nobel Assembly</a>
+      <div class="nav-dropdown">
+        <a href="risk-areas.html" tabindex="0" class="nav-item active" aria-current="page">Risk Areas <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:230px;padding:6px;z-index:60;">
+          <a href="risk-areas.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Overview</a>
+          <a href="risk-ai.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Artificial Intelligence</a>
+          <a href="risk-nuclear.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Nuclear Weapons</a>
+        </div>
+      </div>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" class="nav-cta">Join Mailing List</a>
     </div>
   </nav>
   <main id="main-content">
@@ -77,7 +83,7 @@
       <img src="brand/icon-ai.png" alt="" style="width:90px;height:90px;flex-shrink:0;">
       <div>
         <div style="font-size:12px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:14px;">RISK AREA</div>
-        <h1 style="font-family:'XOX Stencil',serif;font-weight:400;text-transform:uppercase;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0;color:#000000;">Artificial Intelligence</h1>
+        <h1 style="font-family:'UChicago Sans Serif',Helvetica,Arial,sans-serif;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0;color:#000000;">Artificial Intelligence</h1>
       </div>
     </div>
   </section>
@@ -85,9 +91,9 @@
     <p style="font-size:18px;line-height:1.7;color:#000000;margin:0 0 24px;">While artificial intelligence continues to improve rapidly, many of the scientists who developed the technology are now raising concerns that it could pose an existential threat to humanity. Echoing Robert Oppenheimer's warnings about nuclear weapons, top AI scientists such as Geoffrey Hinton, Ilya Sutskever, and Yoshua Bengio have suggested that their inventions now rank among humanity's greatest dangers.</p>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">AI may pose an existential risk in two distinct ways. The first, <strong>misuse</strong>, could threaten humanity's survival if future systems enable bad actors to create biological or nuclear weapons, or other capabilities that threaten human civilization. The second, <strong>misalignment</strong>, could pose an existential threat if a sufficiently intelligent system develops goals that conflict with human values and therefore takes actions indifferent to human welfare.</p>
     <img src="images/symposium-transformative-ai.jpg" alt="Students in discussion at the Chicago Symposium for Transformative AI" style="width:100%;height:360px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);margin:36px 0;">
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Our Strategy</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Our Strategy</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 20px;">Our group runs programs that provide value to both UChicago students and the wider community concerned about AI risk. For UChicago students we run an AI safety fundamentals course, social events, and research opportunities. While we pay particular attention to providing opportunities for UChicago students, XLab's ultimate goal is to benefit all of humanity — so we make our courses, research, and other resources publicly available to students at other schools and the wider research community.</p>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Second Look</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Second Look</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 20px;">AI safety research increasingly shapes high-stakes decisions: which problems get prioritized, where talent flows, and what is communicated to the public. Since the field is so young, directional shifts in research priorities have a huge influence — yet there is no systematic process to ensure intellectual accountability. Even when papers are peer reviewed, reviewers rarely run any experiments themselves. This creates several risks:</p>
     <ul style="font-size:16px;line-height:1.8;color:#4D4D4D;margin:0 0 20px;padding-left:20px;">
       <li><strong style="color:#000000;">Internal epistemic risks:</strong> If foundational papers are misleading, the field will build strategy on shaky ground.</li>
@@ -95,20 +101,20 @@
       <li><strong style="color:#000000;">External credibility risks:</strong> The AI safety community routinely shares research before it is verified by a third party. If findings end up being false, it could damage the credibility of the entire community.</li>
     </ul>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">Our solution is simple: we aim to strengthen AI safety's epistemic foundations by systematically verifying the empirical claims that shape research priorities and strategy.</p>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">AI Security Guide</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">AI Security Guide</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">The XLab AI Security Guide gives researchers and students the background needed to begin AI security research, with two core components: webpages giving an overview of each topic covered in the course, and coding exercises — runnable locally or in Google Colab — that test understanding and build the specific programming skills the work requires.</p>
     <img src="images/TAI85.jpg" alt="Students in discussion at the Chicago Symposium for Transformative AI" style="width:100%;height:360px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);margin:36px 0;">
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Chicago Symposium for Transformative AI</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Chicago Symposium for Transformative AI</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">An intensive two-day event bringing together 30–40 promising undergraduates to rigorously examine the implications of transformative AI, held at the University of Chicago's David Rubenstein Forum. Participants heard from leading speakers in technical and policy AI research, in a program emphasizing independent thinking and assumption-challenging through scenario forecasting and interactive simulations of possible futures.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px;">
       <img src="images/TAI24.jpg" alt="Speaker addressing Chicago Symposium for Transformative AI attendees" style="width:100%;height:220px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);">
       <img src="images/TAI92.jpg" alt="Attendee holding a Chicago Symposium for Transformative AI 2025 t-shirt" style="width:100%;height:220px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);">
     </div>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">AI Policy Research</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">AI Policy Research</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">Over the course of two quarters, we have funded 7 research projects related to AI policy. While some deal directly with developing better legislation, others focus on technical research essential for informing and enforcing AI regulations. Selected projects were presented at the Chicago Symposium for Transformative AI.</p>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">AI Risk Fundamentals Course</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">AI Risk Fundamentals Course</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">XLab's AI Safety Fundamentals course is a seven-week reading group that brings students together each quarter for dinner and structured discussion of challenges facing the safe development of artificial intelligence. Students examine both technical safety challenges and broader policy considerations such as AI governance frameworks and regulatory approaches, with sessions dedicated to criticisms and counter-arguments within the field for a nuanced understanding of ongoing debates.</p>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Research &amp; Working Groups</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Research &amp; Working Groups</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 20px;">Student-led working groups run two-quarter projects producing workshop papers across our risk areas, alongside individual fellow research on technical safety, governance, and forecasting.</p>
     <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid #D9D9D9;margin-bottom:36px;">
       <div style="padding:22px 0;border-bottom:1px solid #D9D9D9;">
@@ -124,14 +130,14 @@
         <p style="font-size:15px;line-height:1.65;color:#4D4D4D;margin:0;">Structured forecasting of catastrophic misuse and loss-of-control scenarios, drawing on methods from the broader existential risk forecasting literature.</p>
       </div>
     </div>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Selected Research</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Selected Research</h2>
     <div style="display:flex;flex-direction:column;gap:14px;">
       <a href="https://arxiv.org/abs/2410.13204" target="_blank" rel="noopener" style="font-size:15px;color:#000000;border-bottom:1px solid #D9D9D9;padding-bottom:12px;text-decoration:underline;">Response Inconsistency of LLMs in High-Stakes Military Decision Making →</a>
       <a href="https://arxiv.org/abs/2408.06210" target="_blank" rel="noopener" style="font-size:15px;color:#000000;border-bottom:1px solid #D9D9D9;padding-bottom:12px;text-decoration:underline;">Certified Safe: A Schematic for Approval Regulation of Frontier AI →</a>
       <a href="https://arxiv.org/abs/2312.08793" target="_blank" rel="noopener" style="font-size:15px;color:#000000;border-bottom:1px solid #D9D9D9;padding-bottom:12px;text-decoration:underline;">Forbidden Facts: Competing Objectives in Llama-2 →</a>
       <a href="https://xrisk.uchicago.edu/files/2024/02/FINALLlerenaXLabSRF23-GlobalGovernanceOfHighRiskAI-0334e1dd25e37cae.pdf" target="_blank" rel="noopener" style="font-size:15px;color:#000000;border-bottom:1px solid #D9D9D9;padding-bottom:12px;text-decoration:underline;">Global Governance of High-Risk Artificial Intelligence →</a>
     </div>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Our People</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Our People</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:8px;">
       <div style="text-align:center;">
         <image-slot id="ai-people-0" src="images/people/jo-jiao.webp" style="width: 192px; height: 193px; border-radius: 50%; margin: 0 auto 14px" shape="circle" placeholder="photo"></image-slot>

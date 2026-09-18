@@ -14,7 +14,6 @@
   a { color: #800000; text-decoration: none; }
   a:hover { text-decoration: underline; }
   ::selection { background: #800000; color: #ffffff; }
-  @font-face { font-family:'XOX Stencil'; src:url('brand/fonts/XOX-Stencil-v2.otf') format('opentype'); font-display:swap; }
   .nav-dropdown { position: relative; }
   .nav-dropdown .dropdown-menu { opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
   .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu { opacity: 1; pointer-events: auto; }
@@ -43,10 +42,10 @@
       </form>
     </div>
   </div>
-  <div style="background:#ffffff;width:100%;padding:24px 0;">
+  <div style="background:#ffffff;width:100%;padding:40px 0;">
     <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
       <a href="index.html" class="site-logo" style="display:block;">
-        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
+        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:75px;display:block;">
       </a>
     </div>
   </div>
@@ -55,19 +54,26 @@
       <span>MENU</span>
       <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
-    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
-      <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
-      <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">ABOUT</a>
-      <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#800000;border-bottom:2px solid #800000;padding-bottom:4px;white-space:nowrap;">RISK AREAS</a>
+    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:stretch;justify-content:center;gap:40px;padding:0 24px;flex-wrap:wrap;box-sizing:border-box;">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="about.html" class="nav-item">About Us</a>
       <div class="nav-dropdown">
-        <a href="fellowship.html" tabindex="0" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;display:inline-block;">FELLOWSHIP</a>
-        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:210px;padding:6px;z-index:60;">
+        <a href="fellowship.html" tabindex="0" class="nav-item">Summer Research Fellowship <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:230px;padding:6px;z-index:60;">
           <a href="fellowship.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Program Overview</a>
           <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Past Fellows' Work</a>
         </div>
       </div>
-      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
-      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" class="nav-item">Nobel Assembly</a>
+      <div class="nav-dropdown">
+        <a href="risk-areas.html" tabindex="0" class="nav-item active" aria-current="page">Risk Areas <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:230px;padding:6px;z-index:60;">
+          <a href="risk-areas.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Overview</a>
+          <a href="risk-ai.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Artificial Intelligence</a>
+          <a href="risk-nuclear.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Nuclear Weapons</a>
+        </div>
+      </div>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" class="nav-cta">Join Mailing List</a>
     </div>
   </nav>
   <main id="main-content">
@@ -77,7 +83,7 @@
       <img src="brand/icon-nuclear.png" alt="" style="flex-shrink: 0; width: 116px">
       <div>
         <div style="font-size:12px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:14px;">RISK AREA</div>
-        <h1 style="font-family:'XOX Stencil',serif;font-weight:400;text-transform:uppercase;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0;color:#000000;">Nuclear Weapons</h1>
+        <h1 style="font-family:'UChicago Sans Serif',Helvetica,Arial,sans-serif;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0;color:#000000;">Nuclear Weapons</h1>
       </div>
     </div>
   </section>
@@ -87,7 +93,7 @@
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">Though the number of nuclear weapons has gone down significantly since the 1980s, the current global stock is still high and rising: as of March 2024, nuclear-armed states possessed a combined total of about 12,100 nuclear weapons. Roughly 3,804 of those are operational, and of those, 2,000 are on "high-alert status" — meaning they stand ready to be launched at any time.</p>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">The rise of artificial intelligence and modernization of arsenals present the potential for new kinds of accidents and false alarms as unfamiliar technologies are deployed. While states are not seriously considering giving AI models direct control of nuclear weapons, militaries are actively looking to incorporate the technology into a wide array of applications, including military decision-making and early warning sensors — introducing new failure modes into an already fragile system.</p>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">The University of Chicago's connection to this risk area runs deep: the world's first controlled nuclear chain reaction took place under Stagg Field in 1942, and the Bulletin of the Atomic Scientists — creator of the Doomsday Clock — was founded in 1945 by Manhattan Project scientists at UChicago concerned about the technology they had helped create.</p>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Top 10 Things to Know About Nuclear Weapons</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Top 10 Things to Know About Nuclear Weapons</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 28px;">Some experts believe the world is at its highest level of nuclear risk since the Cuban Missile Crisis. With Russia's war in Ukraine, China's rapid nuclear modernization, and heightened tensions in the Middle East, the chance of escalation — deliberate or inadvertent — is dangerously high. Here are 10 things to know:</p>
     <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid #D9D9D9;margin-bottom:36px;">
       <div style="display:grid;grid-template-columns:40px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid #D9D9D9;">
@@ -161,7 +167,7 @@
         </div>
       </div>
     </div>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Our Research Focus</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Our Research Focus</h2>
     <div style="display:flex;flex-direction:column;gap:28px;margin-bottom:8px;">
       <div>
         <h3 style="font-size:16.5px;font-weight:700;margin:0 0 8px;color:#800000;">Post-Detonation Interventions</h3>
@@ -176,7 +182,7 @@
         <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0;">The nuclear field often confuses the "politically irrelevant" with the "scientifically resolved." When certain questions fall out of political relevance, the field often stops investigating them — spanning public risk narratives, decision-making, and military planning, as well as hard sciences such as the effects of nuclear war and nuclear winter. This area re-interrogates these assumptions and updates them for modern conditions, identifying where uncertainties lie and where future work is needed.</p>
       </div>
     </div>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Nuclear Risk Working Group</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Nuclear Risk Working Group</h2>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 20px;">A multidisciplinary research group for undergraduate and graduate students, working on individual and collaborative projects surrounding nuclear weapons and global catastrophic risk under the advisory of XLab staff and university faculty. Students research and produce novel, interdisciplinary investigations of understudied topics in nuclear risk, with direct applications to national security, existential risk, and the broader field.</p>
     <p style="font-size:16px;line-height:1.75;color:#4D4D4D;margin:0 0 24px;">Through the working group, students engage with graduate-level scholars and senior field experts, expand their networks through professional development opportunities, cultivate research and briefing skills through workshops, and collaborate with fellow students. This offers students the chance to develop lines of research they can carry forward into master's and PhD study, or into policy, analysis, consulting, intelligence, diplomacy, and energy careers. Final deliverables are published on XLab's website and shared with the lab's network of policymakers and researchers.</p>
     <img src="images/IMG_1847-1.jpeg" alt="XLab staff member speaking with nuclear risk working group fellows" style="width:100%;height:340px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);margin-bottom:36px;">
@@ -214,7 +220,7 @@
     <h3 style="font-size:18px;font-weight:700;margin:0 0 20px;color:#000000;">People</h3>
     <div style="display:flex;flex-direction:column;gap:26px;margin-bottom:8px;">
       <div style="display:flex;gap:18px;align-items:flex-start;">
-        <image-slot id="nuclear-people-berzak" src="images/people/madeline-berzak.webp" style="width: 111px; height: 115px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
+        <image-slot id="nuclear-people-berzak" src="images/people/madeline-berzak-2026.webp" style="width: 111px; height: 115px; flex-shrink: 0" shape="circle" placeholder="photo"></image-slot>
         <div>
           <h4 style="font-size:15.5px;font-weight:700;margin:0 0 8px;color:#000000;">Madeline Berzak</h4>
           <p style="font-size:14.5px;line-height:1.7;color:#4D4D4D;margin:0;">Manages the nuclear risk research program at XLab. Madeline holds a bachelor’s in political science and public policy from American University, and a master’s in nonproliferation and terrorism studies from the Middlebury Institute of International Studies at Monterey. She was formerly an open source intelligence analyst at the James Martin Center for Nonproliferation Studies, focusing on North Korea’s nuclear weapons program, and has worked for the Nuclear Threat Initiative and Physicians for Social Responsibility. Madeline also runs Appetites for Risk, a Substack on the relationship between big risks and culture.</p>
@@ -242,7 +248,7 @@
         </div>
       </div>
     </div>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">XLab's Approach</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">XLab's Approach</h2>
     <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid #D9D9D9;">
       <div style="padding:22px 0;border-bottom:1px solid #D9D9D9;">
         <h3 style="font-size:15px;font-weight:700;margin:0 0 8px;color:#800000;">HIGH-LEVEL CONVENING</h3>
@@ -257,7 +263,7 @@
         <p style="font-size:15px;line-height:1.65;color:#4D4D4D;margin:0;">Panels and screenings held with partners including the Bulletin of the Atomic Scientists, most recently on the annual Doomsday Clock announcement and a screening of Kathryn Bigelow's <em>A House of Dynamite</em>.</p>
       </div>
     </div>
-    <h2 style="font-size:22px;font-weight:700;margin:48px 0 18px;color:#000000;">Learn More</h2>
+    <h2 style="font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:48px 0 18px;color:#000000;">Learn More</h2>
     <div style="display:flex;flex-direction:column;gap:14px;">
       <a href="https://nobelassembly.org/" target="_blank" rel="noopener" style="font-size:15px;color:#000000;border-bottom:1px solid #D9D9D9;padding-bottom:12px;text-decoration:underline;">The Nobel Assembly &amp; Declaration for the Prevention of Nuclear War →</a>
       <a href="https://forecastingresearch.org/xpt" target="_blank" rel="noopener" style="font-size:15px;color:#000000;border-bottom:1px solid #D9D9D9;padding-bottom:12px;text-decoration:underline;">Forecasting Existential Risks (Cuban Missile Crisis odds, and today's) →</a>

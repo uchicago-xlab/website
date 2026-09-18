@@ -15,7 +15,6 @@
   a { color: #800000; text-decoration: none; }
   a:hover { text-decoration: underline; }
   ::selection { background: #800000; color: #ffffff; }
-  @font-face { font-family:'XOX Stencil'; src:url('brand/fonts/XOX-Stencil-v2.otf') format('opentype'); font-display:swap; }
   @keyframes heroZoom { 0% { transform: scale(1); } 100% { transform: scale(1.09); } }
   [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
   [data-reveal].revealed { opacity: 1; transform: translateY(0); }
@@ -47,10 +46,10 @@
       </form>
     </div>
   </div>
-  <div style="background:#ffffff;width:100%;padding:24px 0;">
+  <div style="background:#ffffff;width:100%;padding:40px 0;">
     <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
       <a href="index.html" class="site-logo" style="display:block;">
-        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
+        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:75px;display:block;">
       </a>
     </div>
   </div>
@@ -59,19 +58,26 @@
       <span>MENU</span>
       <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
-    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
-      <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
-      <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">ABOUT</a>
-      <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">RISK AREAS</a>
+    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:stretch;justify-content:center;gap:40px;padding:0 24px;flex-wrap:wrap;box-sizing:border-box;">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="about.html" class="nav-item">About Us</a>
       <div class="nav-dropdown">
-        <a href="fellowship.html" tabindex="0" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#800000;border-bottom:2px solid #800000;padding-bottom:4px;font-weight:700;white-space:nowrap;display:inline-block;">FELLOWSHIP</a>
-        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:210px;padding:6px;z-index:60;">
-          <a href="fellowship.html" style="display:block;padding:11px 14px;font-size:13px;color:#800000;white-space:nowrap;font-weight:700;">Program Overview</a>
+        <a href="fellowship.html" tabindex="0" class="nav-item active" aria-current="page">Summer Research Fellowship <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:230px;padding:6px;z-index:60;">
+          <a href="fellowship.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Program Overview</a>
           <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Past Fellows' Work</a>
         </div>
       </div>
-      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
-      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" class="nav-item">Nobel Assembly</a>
+      <div class="nav-dropdown">
+        <a href="risk-areas.html" tabindex="0" class="nav-item">Risk Areas <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:230px;padding:6px;z-index:60;">
+          <a href="risk-areas.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Overview</a>
+          <a href="risk-ai.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Artificial Intelligence</a>
+          <a href="risk-nuclear.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Nuclear Weapons</a>
+        </div>
+      </div>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" class="nav-cta">Join Mailing List</a>
     </div>
   </nav>
   <main id="main-content">
@@ -87,7 +93,7 @@
       <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;">
         <div>
           <div style="font-size:12px;letter-spacing:0.24em;color:#ffffff;font-weight:600;margin-bottom:32px;">SUMMER RESEARCH FELLOWSHIP 2026</div>
-          <h1 style="font-family:'XOX Stencil',serif;font-weight:400;font-size:clamp(38px,5.5vw,64px);line-height:1.08;letter-spacing:-0.01em;margin:0;max-width:800px;color:#ffffff;text-transform:uppercase;">Ten weeks. Your research question. Your call.</h1>
+          <h1 style="font-family:'UChicago Sans Serif',Helvetica,Arial,sans-serif;font-weight:700;letter-spacing:0.08em;font-size:clamp(38px,5.5vw,64px);line-height:1.08;margin:0;max-width:800px;color:#ffffff;text-transform:uppercase;">Ten weeks. Your research question. Your call.</h1>
         </div>
         <a href="https://coda.io/form/XLab-SRF-26-Application-Form_d533iNrB2Rn" target="_blank" rel="noopener" style="flex-shrink:0;font-size:13px;letter-spacing:0.08em;color:#ffffff;background:#800000;padding:16px 34px;white-space:nowrap;">APPLY HERE →</a>
       </div>
@@ -120,7 +126,7 @@
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px;flex-wrap:wrap;">
         <div>
           <div style="font-size:12px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:14px;">WHAT YOU GET</div>
-          <h2 style="font-size:30px;font-weight:700;margin:0;color:#000000;">Program Details</h2>
+          <h2 style="font-size:30px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0;color:#000000;">Program Details</h2>
         </div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#D9D9D9;border:1px solid #D9D9D9;">
@@ -165,7 +171,7 @@
       </div>
       <div>
         <div style="font-size:12px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:16px;">WHAT YOU'LL WORK ON</div>
-        <h2 style="font-size:30px;font-weight:700;margin:0 0 20px;color:#000000;">Research Areas</h2>
+        <h2 style="font-size:30px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;color:#000000;">Research Areas</h2>
         <p style="font-size:16px;line-height:1.7;color:#4D4D4D;margin:0 0 18px;">Our program focuses on AI strategy, security, and governance, and nuclear weapon security. But we see these areas not as separate issues to be siloed, but facets of the same problem — a single research question can cascade across domains.</p>
         <p style="font-size:16px;line-height:1.7;color:#4D4D4D;margin:0 0 18px;">The satellite imagery techniques that track compute buildups for AI governance also inform long-standing questions about arsenal survivability. As AI intensifies great-power competition, nuclear-armed states may face use-it-or-lose-it pressures if they believe AI-enabled technology will render their arsenals vulnerable.</p>
         <p style="font-size:14.5px;line-height:1.7;color:#737373;margin:0;">We especially encourage proposals using open-source intelligence, forecasting, strategic net assessment, or scenario analysis — though we're just as excited to review technical governance, AI security, and applied AI research.</p>
@@ -176,7 +182,7 @@
   <section data-reveal style="padding:80px 48px;max-width:1180px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;">
       <div>
-        <h2 style="font-size:30px;font-weight:700;margin:0 0 18px;color:#000000;">Who Should Apply</h2>
+        <h2 style="font-size:30px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 18px;color:#000000;">Who Should Apply</h2>
         <ul style="font-size:15px;line-height:1.8;color:#4D4D4D;margin:0 0 20px;padding-left:20px;">
           <li>Demonstrated commitment to a career in AI safety, security and governance, or nuclear security</li>
           <li>Substantive familiarity with the field and its open questions</li>
@@ -194,7 +200,7 @@
   <section data-reveal style="background:#404040;padding:88px 48px;">
     <div style="max-width:1180px;margin:0 auto;">
       <div style="display:flex;align-items:center;gap:24px;margin-bottom:16px;flex-wrap:wrap;">
-        <div style="font-size: 72px; font-weight: 700; color: #ffffff; line-height: 1; font-family: 'XOX Stencil',serif; width: 134px; text-align: center;">60</div>
+        <div style="font-size: 72px; font-weight: 700; color: #ffffff; line-height: 1; font-family:'UChicago Sans Serif',Helvetica,Arial,sans-serif; width: 134px; text-align: center;">60</div>
         <p style="font-size: 16px; line-height: 1.6; color: #D9D9D9; margin: 0; max-width: 640px;">alumni since 2022, now at OpenAI, RAND, Google DeepMind, MATS, SecureBio, the Federation of American Scientists, the Institute for Progress, MILA, the intelligence community, congressional offices, and leading PhD programs.</p>
       </div>
       <h3 style="font-size:14px;letter-spacing:0.14em;font-weight:700;margin:56px 0 24px;color:#ffffff;border-top:1px solid #737373;padding-top:32px;">SELECTED OUTPUTS</h3>
@@ -230,7 +236,7 @@
   <section data-reveal style="background: #FFFFFF; padding: 88px 48px;">
     <div style="max-width:1180px;margin:0 auto;">
       <div style="font-size:12px;letter-spacing:0.22em;color:#800000;font-weight:700;margin-bottom:14px;">FROM PAST COHORTS</div>
-      <h2 style="font-size:30px;font-weight:700;margin:0 0 48px;color:#000000;">Fellow Testimonials</h2>
+      <h2 style="font-size:30px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 48px;color:#000000;">Fellow Testimonials</h2>
       <div style="display:flex;flex-direction:column;gap:0;">
           <div class="stack-sm" style="display:flex;align-items:center;gap:28px;padding:32px 0;border-bottom:1px solid #D9D9D9;">
             <div style="display:flex;align-items:center;gap:16px;width:220px;flex-shrink:0;">
