@@ -49,10 +49,10 @@
       </form>
     </div>
   </div>
-  <div style="background:#ffffff;width:100%;padding:24px 0;">
+  <div style="background:#ffffff;width:100%;padding:40px 0;">
     <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:center;padding:0 60px;box-sizing:border-box;">
       <a href="index.html" class="site-logo" style="display:block;">
-        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:60px;display:block;">
+        <img src="brand/xlab-logo-horizontal-color.png" alt="XLab, The University of Chicago Existential Risk Laboratory" style="height:75px;display:block;">
       </a>
     </div>
   </div>
@@ -61,19 +61,26 @@
       <span>MENU</span>
       <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
-    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:28px;padding:14px 24px;flex-wrap:wrap;box-sizing:border-box;">
-      <a href="index.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">HOME</a>
-      <a href="about.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#800000;border-bottom:2px solid #800000;padding-bottom:4px;white-space:nowrap;">ABOUT</a>
-      <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">RISK AREAS</a>
+    <div id="site-nav-links" class="nav-links" style="max-width:1430px;margin:0 auto;display:flex;align-items:stretch;justify-content:center;gap:40px;padding:0 24px;flex-wrap:wrap;box-sizing:border-box;">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="about.html" class="nav-item active" aria-current="page">About Us</a>
       <div class="nav-dropdown">
-        <a href="fellowship.html" tabindex="0" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;display:inline-block;">FELLOWSHIP</a>
-        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:210px;padding:6px;z-index:60;">
+        <a href="fellowship.html" tabindex="0" class="nav-item">Summer Research Fellowship <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:230px;padding:6px;z-index:60;">
           <a href="fellowship.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Program Overview</a>
           <a href="fellows-outputs.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Past Fellows' Work</a>
         </div>
       </div>
-      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" style="font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:#000000;white-space:nowrap;">NOBEL ASSEMBLY</a>
-      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;background:#800000;padding:10px 18px;white-space:nowrap;">JOIN MAILING LIST</a>
+      <a href="https://nobelassembly.org/" target="_blank" rel="noopener" class="nav-item">Nobel Assembly</a>
+      <div class="nav-dropdown">
+        <a href="risk-areas.html" tabindex="0" class="nav-item">Risk Areas <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown-menu" style="position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#ffffff;border:1px solid #D9D9D9;box-shadow:0 14px 28px rgba(0,0,0,0.14);min-width:230px;padding:6px;z-index:60;">
+          <a href="risk-areas.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Overview</a>
+          <a href="risk-ai.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Artificial Intelligence</a>
+          <a href="risk-nuclear.html" style="display:block;padding:11px 14px;font-size:13px;color:#000000;white-space:nowrap;">Nuclear Weapons</a>
+        </div>
+      </div>
+      <a href="https://lists.uchicago.edu/web/info/xlab" target="_blank" rel="noopener" class="nav-cta">Join Mailing List</a>
     </div>
   </nav>
   <main id="main-content">
@@ -115,7 +122,7 @@
           <img src="images/campus-buildings.jpg" alt="Gothic and modern campus buildings side by side" style="width:100%;height:400px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05);">
         </div>
         <div>
-          <h2 style="font-size:28px;font-weight:700;margin:0 0 24px;color:#000000;">A legacy dating to Stagg Field.</h2>
+          <h2 style="font-size:28px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 24px;color:#000000;">A legacy dating to Stagg Field.</h2>
           <p style="font-size:16px;line-height:1.7;color:#4D4D4D;margin:0 0 18px;">The legacy of existential risk work at the University of Chicago dates back to Enrico Fermi and the world's first nuclear chain reaction under the historic Stagg Field.</p>
           <p style="font-size:16px;line-height:1.7;color:#4D4D4D;margin:0;">The Bulletin of the Atomic Scientists — creator of the Doomsday Clock — was founded in 1945 by UChicago scientists from the Manhattan Project who were concerned about the emerging dangers. XLab was founded in the same spirit of concern and commitment to mitigating the great threats of our time.</p>
         </div>
@@ -125,7 +132,7 @@
 
   <section data-reveal style="background:#404040;padding:80px 0;">
     <div style="max-width:1180px;margin:0 auto;">
-      <h2 style="font-size:26px;font-weight:700;margin:0 0 44px;color:#ffffff;padding:0 48px;">Meet Our Team</h2>
+      <h2 style="font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 44px;color:#ffffff;padding:0 48px;">Meet Our Team</h2>
     </div>
     <div style="max-width:1180px;margin:0 auto;padding:0 48px;box-sizing:border-box;">
       <div class="team-row" style="display:flex;gap:24px;justify-content:center;flex-wrap:nowrap;">
@@ -184,7 +191,7 @@
   </section>
 
   <section data-reveal style="padding:80px 48px;max-width:1180px;margin:0 auto;">
-    <h2 style="font-size:24px;font-weight:700;margin:0 0 12px;color:#000000;">Faculty Advisory Committee</h2>
+    <h2 style="font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 12px;color:#000000;">Faculty Advisory Committee</h2>
     <p style="font-size:14px;color:#737373;margin:0 0 36px;max-width:640px;">Scholars from across the academy who guide XLab's research direction.</p>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;">
       <div style="display:flex;gap:14px;align-items:flex-start;">
