@@ -6,9 +6,9 @@
 <title>XLab — UChicago Existential Risk Laboratory</title>
 <meta name="description" content="XLab is the University of Chicago's Existential Risk Laboratory, an interdisciplinary research organization studying and mitigating catastrophic risks from AI, nuclear weapons, biosecurity, and climate change.">
 <link href="https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/UChicagoSansSerif.css" rel="stylesheet">
-<script src="js/image-slot.js"></script>
-<link rel="stylesheet" href="css/site.css">
-<script src="js/site.js" defer></script>
+<script src="js/image-slot.js?v=20260918a"></script>
+<link rel="stylesheet" href="css/site.css?v=20260918a">
+<script src="js/site.js?v=20260918a" defer></script>
 <style>
   body { margin: 0; background: #ffffff; font-family: 'UChicago Sans Serif', Helvetica, Arial, sans-serif; color: #000000; }
   a { color: #800000; text-decoration: none; }
@@ -32,7 +32,7 @@
 </head>
 <body>
 <div style="background:#ffffff;color:#000000;min-height:100vh;">
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a><div id="scrollbar" style="position:fixed;top:0;left:0;height:3px;background:#800000;z-index:200;width:0%;"></div>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a>
   <div style="background:#800000;width:100%;">
     <div class="topbar" style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
       <a href="https://www.uchicago.edu" style="display:flex;align-items:center;gap:10px;" aria-label="The University of Chicago">
@@ -98,7 +98,9 @@
     </div>
   </section>
 
-  <section data-reveal style="padding:88px 48px 40px;max-width:1180px;margin:0 auto;">
+  <section data-reveal class="risks-section" style="position:relative;overflow:hidden;padding:88px 0 40px;">
+    <div class="risks-texture" aria-hidden="true" style="position:absolute;inset:0;background-image:url('images/glitch-x-bg.gif');background-size:160% auto;background-position:center center;background-repeat:no-repeat;opacity:0.32;filter:grayscale(1);pointer-events:none;"></div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;padding:0 48px;">
     <div style="margin-bottom:56px;">
       <h2 style="font-family:'XOX Stencil',serif;text-transform:uppercase;font-weight:400;letter-spacing:-0.01em;font-size:clamp(40px,6vw,72px);line-height:0.98;margin:0 0 20px;color:#000000;">What Are<br>The Risks?</h2>
       <a href="risk-areas.html" style="font-size:14px;letter-spacing:0.04em;text-decoration:underline;color:#800000;">VIEW ALL RISK AREAS →</a>
@@ -124,6 +126,7 @@
           <h3 style="font-size:16px;font-weight:700;margin:0 0 12px;letter-spacing:0.02em;color:#000000;">CLIMATE</h3>
           <p style="font-size:14.5px;line-height:1.6;color:#4D4D4D;margin:0;">Feedback effects beyond a tipping point could lead to even more catastrophic outcomes.</p>
         </div>
+    </div>
     </div>
   </section>
 
@@ -245,12 +248,6 @@ document.querySelectorAll('[data-reveal]').forEach(function(el){
   }, {threshold:0.12});
   io.observe(el);
 });
-window.addEventListener('scroll', function(){
-  var h = document.documentElement.scrollHeight - window.innerHeight;
-  var pct = h>0 ? Math.min(100, (window.scrollY/h)*100) : 0;
-  var bar = document.getElementById('scrollbar');
-  if(bar) bar.style.width = pct+'%';
-}, {passive:true});
 </script>
 </body>
 </html>

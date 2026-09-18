@@ -6,9 +6,9 @@
 <title>About — XLab</title>
 <meta name="description" content="Learn about XLab, the University of Chicago Existential Risk Laboratory: our story, team, faculty advisory committee, and funders.">
 <link href="https://uchicago-brand-fonts.s3.us-east-2.amazonaws.com/UChicagoSansSerif.css" rel="stylesheet">
-<script src="js/image-slot.js"></script>
-<link rel="stylesheet" href="css/site.css">
-<script src="js/site.js" defer></script>
+<script src="js/image-slot.js?v=20260918a"></script>
+<link rel="stylesheet" href="css/site.css?v=20260918a">
+<script src="js/site.js?v=20260918a" defer></script>
 <style>
   body { margin: 0; background: #ffffff; font-family: 'UChicago Sans Serif', Helvetica, Arial, sans-serif; color: #000000; }
   a { color: #800000; text-decoration: none; }
@@ -32,7 +32,7 @@
 </head>
 <body>
 <div style="background:#ffffff;color:#000000;min-height:100vh;">
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a><div id="scrollbar" style="position:fixed;top:0;left:0;height:3px;background:#800000;z-index:200;width:0%;"></div>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100;background:#800000;color:#ffffff;padding:12px 20px;font-size:13px;">Skip to main content</a>
   <div style="background:#800000;width:100%;">
     <div class="topbar" style="max-width:1440px;margin:0 auto;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:0.8rem;box-sizing:border-box;">
       <a href="https://www.uchicago.edu" style="display:flex;align-items:center;gap:10px;" aria-label="The University of Chicago">
@@ -358,12 +358,6 @@ document.querySelectorAll('[data-reveal]').forEach(function(el){
   }, {threshold:0.12});
   io.observe(el);
 });
-window.addEventListener('scroll', function(){
-  var h = document.documentElement.scrollHeight - window.innerHeight;
-  var pct = h>0 ? Math.min(100, (window.scrollY/h)*100) : 0;
-  var bar = document.getElementById('scrollbar');
-  if(bar) bar.style.width = pct+'%';
-}, {passive:true});
 </script>
 </body>
 </html>
