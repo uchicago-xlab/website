@@ -53,7 +53,27 @@
     window.addEventListener('resize', render);
     render();
   }
-  function boot() { init(); document.querySelectorAll('[data-carousel]').forEach(carousel); }
+  // Modal: any element with data-modal="<template id>" opens that template's content in the page's <dialog>.
+  function modals() {
+    var dlg = document.querySelector('dialog.xl-modal');
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    var box = dlg.querySelector('.xl-modal-content');
+    var closeBtn = dlg.querySelector('.xl-modal-close');
+    var opener = null;
+    function close() { dlg.close(); }
+    document.querySelectorAll('[data-modal]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var tpl = document.getElementById(el.getAttribute('data-modal'));
+        if (!tpl) return;
+        box.innerHTML = ''; box.appendChild(tpl.content.cloneNode(true));
+        opener = el; dlg.showModal(); closeBtn.focus();
+      });
+    });
+    closeBtn.addEventListener('click', close);
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+    dlg.addEventListener('close', function () { if (opener) opener.focus(); });
+  }
+  function boot() { init(); document.querySelectorAll('[data-carousel]').forEach(carousel); modals(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
 })();
