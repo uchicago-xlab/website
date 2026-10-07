@@ -160,7 +160,7 @@ nav { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
 .xl-modal { border: 0; padding: 0; max-width: min(720px, calc(100vw - 32px)); width: 100%; background: #ffffff; color: #000000; box-shadow: 0 24px 60px rgba(0,0,0,0.3); }
 .xl-modal::backdrop { background: rgba(0, 0, 0, 0.6); }
 .xl-modal-content { padding: 0; max-height: calc(100vh - 64px); overflow-y: auto; }
-.xl-modal-body img { width: 100%; height: auto; display: block; }
+.xl-modal-body img { width: 100%; height: auto; max-height: 360px; object-fit: cover; object-position: center 30%; display: block; }
 .xl-modal-body h3 { font-size: 22px; font-weight: 700; margin: 24px 28px 10px; color: #000000; }
 .xl-modal-body p { font-size: 16px; line-height: 1.7; color: #4D4D4D; margin: 0 28px 16px; }
 .xl-modal-body p:last-child { margin-bottom: 28px; }
