@@ -73,7 +73,17 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
     dlg.addEventListener('close', function () { if (opener) opener.focus(); });
   }
-  function boot() { init(); document.querySelectorAll('[data-carousel]').forEach(carousel); modals(); }
+  // Scroll-in reveal for any page that uses data-reveal (the homepage has its own copy inline).
+  function reveal() {
+    var els = document.querySelectorAll('[data-reveal]');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(function (el) { el.classList.add('revealed'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  }
+  function boot() { init(); document.querySelectorAll('[data-carousel]').forEach(carousel); modals(); reveal(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
 })();
