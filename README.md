@@ -10,7 +10,7 @@ merging to `main` deploys it. Preview: https://uchicago-xlab.github.io/website/
 | --- | --- |
 | `*.html` | The seven pages. Navigation and footer are identical across them. |
 | `css/site.css` | Shared responsive layer (tablet and phone layouts, mobile menu). Page styling is otherwise inline in each HTML file. |
-| `js/site.js` | Mobile menu toggle. |
+| `js/site.js` | Mobile menu toggle, News carousel, pop-up modals, and the scroll-in reveal for elements marked `data-reveal`. |
 | `js/image-slot.js` | The `<image-slot>` web component used for headshots and logos. Read-only on the live site; images come from each slot's `src`. |
 | `brand/` | Logos, risk-area icons, and the XOX fonts (`brand/fonts/`). |
 | `images/` | Page photography and funder logos. |
