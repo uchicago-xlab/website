@@ -16,7 +16,7 @@ merging to `main` deploys it. Preview: https://uchicago-xlab.github.io/website/
 | `images/` | Page photography and funder logos. |
 | `images/people/` | Team, faculty, and program headshots. |
 | `images/fellows/` | Headshots for the Past Fellows' Work page. |
-| `files/` | PDFs linked from the site, kept at the same paths they had on the old xrisk.uchicago.edu site so existing links keep working. |
+| `files/` | PDFs linked from the site. Older cohorts keep the paths they had on the old xrisk.uchicago.edu site so existing links keep working; new cohorts go in `files/<year>/`. |
 
 ## Editing notes
 
@@ -25,6 +25,7 @@ merging to `main` deploys it. Preview: https://uchicago-xlab.github.io/website/
   one renders a grey "photo" placeholder.
 - The nuclear working group entries for Peters and Cullison still have no
   photo (no file was available when the site was assembled).
+- To add a fellow to the Past Fellows' Work page: put the PDF in `files/<year>/`, the headshot in `images/fellows/` as `<year>-<first-last>.webp` (square, face centred), copy one card block in `fellows-outputs.html`, and make sure a year button exists for that cohort.
 - Responsive rules live in `css/site.css` and override the inline desktop
   styles with `!important`. Breakpoints are 900px (tablet) and 640px (phone).
 
