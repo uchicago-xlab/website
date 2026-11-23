@@ -675,6 +675,8 @@
     // profile
     html += '<div class="card card-pad"><h3>' + icon('user', 15) + 'Your profile</h3><div class="row" style="gap:14px;align-items:flex-start">' + App.avatar(m.id, 'xl') + '<div style="flex:1"><div style="font-weight:700;font-size:16px">' + esc(m.name) + '</div><div class="muted" style="font-size:13px">' + esc([m.title, App.roleLabel(m.role), m.email].filter(Boolean).join(' · ')) + '</div><div class="row wrap-row" style="margin-top:6px;gap:6px">' + m.teams.map(App.teamChip).join('') + '</div><div class="hint" style="margin-top:8px">' + (m.slackId ? 'Slack member ID: ' + esc(m.slackId) : 'Slack finds you by your email. If DMs don’t arrive, add your Slack member ID (Slack → your profile → ⋯ → Copy member ID).') + '</div></div><button type="button" class="btn" data-act="editPerson" data-id="' + esc(m.id) + '">' + icon('edit', 14) + 'Edit profile</button></div></div>';
 
+    html += App.feedbackSettingsHtml();
+
     // integrations
     html += '<div class="section-title" style="margin-top:22px">Integrations</div><div class="grid-2">';
     html += '<div class="card int-card"><div class="int-head"><div class="int-logo" style="background:#4a154b">#</div><div style="flex:1"><b>Slack</b><div class="hint">Notifications, nudges and daily digests</div></div>' + (I.slack ? '<span class="status-tag on">Connected (' + (I.slack === 'bot' ? 'bot: DMs + channels' : 'webhook: one channel') + ')</span>' : '<span class="status-tag off">Not connected</span>') + '</div>' +

@@ -30,6 +30,19 @@ The design is built around four habits. They're shown to everyone on first visit
 
 Anyone can **nudge** an owner (once every 12 hours per task) to ask for an update, and every change is logged with who made it.
 
+### Feedback button
+
+Every page has a **Feedback** button in the bottom-right corner, also under the task panel's ⋯ menu and in search (`/` → "feedback"). People pick *Something's broken*, *Idea*, *Confusing* or *I like this* and write a note. The report automatically includes the page they were on, the open task, their browser and screen size, and any errors the app hit recently, so bug reports are useful without anyone knowing how to write one. They can untick that box.
+
+In the deployed tracker, each submission:
+
+- is saved to a **feedback** tab in the data spreadsheet, and shows up for exec under **Settings → Feedback**, where it can be marked done
+- is **emailed** to `FEEDBACK_EMAIL`. `setup` sets this to the deploying account; change it in Script properties, and use commas for several people. Replying to the email answers the person who sent it.
+- is sent as a **Slack DM** to those same people if Slack is connected, or posted to `FEEDBACK_SLACK_CHANNEL` if you set one
+- *optionally* becomes a **GitHub issue** labelled `tracker-feedback`. This is for bugs and ideas, not praise. Turn it on with `GITHUB_TOKEN` (a [fine-grained token](https://github.com/settings/personal-access-tokens/new) with *Issues: read and write* on just this repo) and `GITHUB_REPO` (`uchicago-xlab/website`). This repo is public, so these issues are too. The issue leaves out the person's name and the task title (those stay in the private log) and neutralizes `@` handles.
+
+To have Claude work through the reports, open a Claude Code session on this repo and ask it to fix the open `tracker-feedback` issues. Or paste the entries from Settings → Feedback into the chat. In demo mode, feedback is kept in your browser and listed in Settings.
+
 ### Shortcuts
 
 - **Quick add** (in any list) understands `Book Ida Noyes @hannah #events !high due fri`. That means owner `@name`, team `#team`, priority `!low|!med|!high|!urgent`, and a due date (`due today`, `due tomorrow`, `due fri`, `due next mon`, `due 12/5`, `due dec 5`, `due in 3 days`). The same syntax works when you add a step.
@@ -132,6 +145,9 @@ People are matched to Slack by email. If someone's Slack email differs, they can
 | `SLACK_BOT_TOKEN` | – | turns on Slack DMs and channel posts |
 | `SLACK_WEBHOOK_URL` | – | alternative single-channel Slack |
 | `DIGEST_HOUR` | `8` | daily digest hour (Chicago time). Re-run `installTriggers` after changing it. |
+| `FEEDBACK_EMAIL` | the deploying account | who receives Feedback-button reports (comma-separated) |
+| `FEEDBACK_SLACK_CHANNEL` | – | post feedback to this channel instead of DMing `FEEDBACK_EMAIL` |
+| `GITHUB_TOKEN`, `GITHUB_REPO` | – | also file bugs and ideas as public GitHub issues labelled `tracker-feedback` |
 
 ## Changing the code
 
@@ -142,6 +158,7 @@ Source files are in `tracker/`:
 - `app-util.js`: helpers, icons, markdown, popovers, modals
 - `app-views.js`: pages
 - `app-panel.js`: task panel and dialogs
+- `app-feedback.js`: Feedback button, dialog and the exec feedback inbox
 - `app-main.js`: state, sync, routing, events
 - `tracker.css`
 

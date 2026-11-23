@@ -7,7 +7,7 @@
 
   var S = App.S = {
     state: C.emptyState(), meId: null, mode: IS_GAS ? 'live' : 'demo', email: null,
-    integrations: { slack: '', drive: false, driveRootUrl: '', sheetUrl: '' }, appUrl: '',
+    integrations: { slack: '', drive: false, driveRootUrl: '', sheetUrl: '', feedback: {} }, appUrl: '',
     route: { path: 'home', id: null, query: {} },
     ui: { filters: {}, collapsed: {}, descEditing: null, drafts: {}, composerMode: {}, composerHealth: {}, showResolved: false, docsTeam: '', docsQ: '' },
     sync: 'ok', since: null, pointerDown: false, renderPending: false, rendering: false
@@ -228,7 +228,7 @@
     var root = document.getElementById('app');
     root.innerHTML = '<div class="app"><nav class="sidebar" id="sidebar" aria-label="Main"></nav><div class="nav-scrim" data-act="toggleNav"></div>' +
       '<main class="main"><header class="topbar" id="topbar"></header><div class="tabs" id="tabs"></div><div class="content" id="content" data-scroll-key="content"></div></main></div>' +
-      '<div class="scrim" id="scrim" data-act="closeTask"></div><aside class="panel" id="panel" aria-label="Task details"></aside><div class="toasts" id="toasts" aria-live="polite"></div>';
+      App.feedbackButton() + '<div class="scrim" id="scrim" data-act="closeTask"></div><aside class="panel" id="panel" aria-label="Task details"></aside><div class="toasts" id="toasts" aria-live="polite"></div>';
     els = { sidebar: document.getElementById('sidebar'), topbar: document.getElementById('topbar'), tabs: document.getElementById('tabs'), content: document.getElementById('content'), panel: document.getElementById('panel'), scrim: document.getElementById('scrim') };
   }
   function pageFor(r) {

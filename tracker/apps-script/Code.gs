@@ -20,6 +20,12 @@
      SLACK_BOT_TOKEN    xoxb-... token of your Slack app (recommended: DMs + channels)
      SLACK_WEBHOOK_URL  alternative: one incoming webhook (everything goes to one channel)
      DIGEST_HOUR        hour (0-23, Chicago time) for the daily digest; default 8
+     FEEDBACK_EMAIL     who gets Feedback-button submissions (comma-separated); setup()
+                        sets it to the deploying account
+     FEEDBACK_SLACK_CHANNEL  optional channel ID to post feedback to (bot token mode)
+     GITHUB_TOKEN       optional fine-grained token with Issues: read & write on GITHUB_REPO
+     GITHUB_REPO        e.g. "uchicago-xlab/website": bugs/ideas also become GitHub issues
+                        labelled "tracker-feedback" (public repo = public issues; names are left out)
    ========================================================================== */
 
 var PROPS = PropertiesService.getScriptProperties();
@@ -336,6 +342,150 @@ function slackTest() {
   return { message: 'Posted a test message to the webhook channel.' };
 }
 
+/* ======================= feedback button ======================= */
+
+var FEEDBACK_HEADERS = ['id', 'at', 'status', 'type', 'from', 'email', 'page', 'task', 'message', 'details', 'issue'];
+var FEEDBACK_TYPES = { bug: 'Bug', idea: 'Idea', confusing: 'Confusing', praise: 'Praise' };
+
+function feedbackSheet_() {
+  var ss = ss_();
+  var sh = ss.getSheetByName('feedback');
+  if (!sh) {
+    sh = ss.insertSheet('feedback');
+    sh.getRange(1, 1, 1, FEEDBACK_HEADERS.length).setValues([FEEDBACK_HEADERS]).setFontWeight('bold');
+    sh.setFrozenRows(1);
+    sh.getRange(1, 1, sh.getMaxRows(), FEEDBACK_HEADERS.length).setNumberFormat('@');
+  }
+  return sh;
+}
+
+/** Called by the Feedback button. Logs to the sheet and tells the maintainers. */
+function submitFeedback(fb) {
+  var email = currentEmail_();
+  fb = fb || {};
+  var type = FEEDBACK_TYPES[fb.type] ? fb.type : 'idea';
+  var message = String(fb.message || '').trim().slice(0, 5000);
+  if (message.length < 3) return { error: 'Please write a little more.' };
+  // light spam guard: 10 submissions per person per hour
+  var cache = CacheService.getScriptCache();
+  var key = 'fb:' + email;
+  var count = parseInt(cache.get(key) || '0', 10);
+  if (count >= 10) return { error: 'That’s a lot of feedback in one hour! Please try again a bit later.' };
+  cache.put(key, String(count + 1), 3600);
+
+  var me = TrackerCore.personByEmail({ people: readCollection_('people') }, email);
+  var name = me ? me.name : email;
+  var ctx = fb.context && typeof fb.context === 'object' ? fb.context : {};
+  var id = 'fb_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+  var at = new Date().toISOString();
+  var task = ctx.task && ctx.task.title ? String(ctx.task.title).slice(0, 200) : '';
+  var details = JSON.stringify(ctx).slice(0, 8000);
+
+  var issueUrl = '';
+  if (type !== 'praise') {
+    try { issueUrl = createGithubIssue_(type, message, ctx); } catch (e) { console.warn('GitHub issue failed: ' + e); }
+  }
+  var lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    var sh = feedbackSheet_();
+    var row = [id, at, 'open', type, cellText_(name), email, cellText_(ctx.pageName || ctx.page || ''), cellText_(task), (/^[=+\-@]/.test(message) ? "'" + message : message), details, issueUrl];
+    sh.getRange(sh.getLastRow() + 1, 1, 1, row.length).setNumberFormat('@').setValues([row]);
+  } finally {
+    lock.releaseLock();
+  }
+  try { notifyFeedback_({ type: type, name: name, email: email, message: message, page: ctx.pageName || ctx.page || '', task: task, errors: ctx.errors || [], issueUrl: issueUrl, details: details }); }
+  catch (e) { console.warn('Feedback notification failed: ' + e); }
+  return { ok: true, id: id, issueUrl: issueUrl };
+}
+
+function notifyFeedback_(f) {
+  var label = FEEDBACK_TYPES[f.type];
+  var to = String(PROPS.getProperty('FEEDBACK_EMAIL') || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
+  var summary = label + ' from ' + f.name + (f.page ? ' on "' + f.page + '"' : '');
+  if (to.length) {
+    MailApp.sendEmail({
+      to: to.join(','), replyTo: f.email, name: 'AI Safety Tracker',
+      subject: '[Tracker feedback] ' + label + ': ' + TrackerCore.clip(f.message, 70),
+      body: summary + (f.task ? '\nTask: ' + f.task : '') + '\n\n' + f.message +
+        (f.errors.length ? '\n\nRecent errors:\n' + f.errors.map(function (e) { return '- ' + e.msg; }).join('\n') : '') +
+        (f.issueUrl ? '\n\nGitHub issue: ' + f.issueUrl : '') +
+        '\n\nReply to this email to answer ' + f.name + ' directly.\nAll feedback: Settings → Feedback in the tracker (' + appUrl_() + ')\n\nTechnical details: ' + f.details
+    });
+  }
+  var text = (f.type === 'bug' ? '🐞' : f.type === 'praise' ? '❤️' : f.type === 'confusing' ? '😕' : '💡') + ' *Tracker feedback* · ' + slackEscape_(summary) + '\n>' + slackEscape_(TrackerCore.clip(f.message, 600)).replace(/\n/g, '\n>') +
+    (f.errors.length ? '\n_' + f.errors.length + ' recent error(s) attached_' : '') + (f.issueUrl ? '\n<' + f.issueUrl + '|GitHub issue>' : '');
+  var cfg = slackCfg_();
+  if (!cfg) return;
+  if (cfg.token) {
+    var channel = PROPS.getProperty('FEEDBACK_SLACK_CHANNEL');
+    if (channel) slackApi_('chat.postMessage', { channel: channel, text: text, unfurl_links: false });
+    else to.forEach(function (addr) { slackDM_({ name: addr, email: addr }, text); });
+  } else {
+    slackWebhook_(text);
+  }
+}
+
+/** Files bugs and ideas as GitHub issues when GITHUB_TOKEN and GITHUB_REPO are set. Leaves out names and task titles. */
+function createGithubIssue_(type, message, ctx) {
+  var token = PROPS.getProperty('GITHUB_TOKEN');
+  var repo = PROPS.getProperty('GITHUB_REPO');
+  if (!token || !repo) return '';
+  // keep @handles and code fences in user text from pinging people or breaking the layout
+  var safe = function (s) { return String(s || '').replace(/@/g, '@\u200b').replace(/~~~/g, '~ ~ ~'); };
+  var title = '[Tracker ' + FEEDBACK_TYPES[type].toLowerCase() + '] ' + TrackerCore.clip(safe(message), 80);
+  var tech = { page: ctx.page || '', version: ctx.version || '', mode: ctx.mode || '', role: ctx.role || '', browser: ctx.browser || '', screen: ctx.screen || '', errors: (ctx.errors || []).map(function (e) { return e.msg; }) };
+  var body = '**Type:** ' + FEEDBACK_TYPES[type] + '\n**Page:** `' + safe(tech.page).replace(/`/g, '') + '`\n\n~~~text\n' + safe(message) + '\n~~~\n\n<details><summary>Technical details</summary>\n\n~~~json\n' + safe(JSON.stringify(tech, null, 2)) + '\n~~~\n</details>\n\n_Sent with the Feedback button in the team tracker (tracker/). Who sent it and which task they were on are in the tracker’s private feedback log._';
+  var labels = ['tracker-feedback', type === 'bug' ? 'bug' : 'enhancement'];
+  function post(withLabels) {
+    var payload = { title: title, body: body };
+    if (withLabels) payload.labels = labels;
+    return UrlFetchApp.fetch('https://api.github.com/repos/' + repo + '/issues', {
+      method: 'post', contentType: 'application/json', muteHttpExceptions: true, payload: JSON.stringify(payload),
+      headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json', 'User-Agent': 'ai-safety-tracker' }
+    });
+  }
+  var res = post(true);
+  if (res.getResponseCode() === 422) res = post(false); // e.g. labels not allowed
+  if (res.getResponseCode() >= 300) { console.warn('GitHub ' + res.getResponseCode() + ': ' + res.getContentText().slice(0, 300)); return ''; }
+  return JSON.parse(res.getContentText()).html_url || '';
+}
+
+/** Feedback inbox for exec (Settings → Feedback). */
+function listFeedback() {
+  requireExec_();
+  var sh = feedbackSheet_();
+  var n = sh.getLastRow();
+  if (n < 2) return { items: [] };
+  var rows = sh.getRange(2, 1, n - 1, FEEDBACK_HEADERS.length).getValues();
+  var items = rows.map(function (r) {
+    var o = {};
+    FEEDBACK_HEADERS.forEach(function (h, i) { o[h] = String(r[i]); });
+    o.details = parse_(o.details) || {};
+    o.pageName = o.page;
+    return o;
+  }).filter(function (o) { return o.id; });
+  items.reverse();
+  return { items: items.slice(0, 300) };
+}
+function setFeedbackStatus(id, status) {
+  requireExec_();
+  if (['open', 'done'].indexOf(status) === -1) return { error: 'Bad status.' };
+  var sh = feedbackSheet_();
+  var n = sh.getLastRow();
+  if (n < 2) return { error: 'Not found.' };
+  var ids = sh.getRange(2, 1, n - 1, 1).getValues().map(function (r) { return String(r[0]); });
+  var idx = ids.indexOf(String(id));
+  if (idx === -1) return { error: 'Not found.' };
+  sh.getRange(idx + 2, 3).setValues([[status]]);
+  return { ok: true };
+}
+function requireExec_() {
+  var me = TrackerCore.personByEmail({ people: readCollection_('people') }, currentEmail_());
+  if (!me || me.role !== 'exec') throw new Error('Only exec members can see the feedback log.');
+  return me;
+}
+
 /* ======================= digests (time-driven triggers) ======================= */
 
 function dailyDigest() {
@@ -429,6 +579,8 @@ function setup_(withSamples) {
   var root = driveRoot_();
   if (!PROPS.getProperty('ALLOWED_DOMAIN')) PROPS.setProperty('ALLOWED_DOMAIN', email.split('@')[1] || 'uchicago.edu');
   if (!PROPS.getProperty('JOIN_MODE')) PROPS.setProperty('JOIN_MODE', 'open');
+  if (!PROPS.getProperty('FEEDBACK_EMAIL')) PROPS.setProperty('FEEDBACK_EMAIL', email);
+  feedbackSheet_();
   installTriggers();
   console.log('Done.\nData spreadsheet: ' + ss.getUrl() + '\nDrive folder: ' + root.getUrl() +
     '\nYou are on the roster as exec (' + email + '). Edit your name in the app (Settings -> Edit profile).' +
@@ -541,6 +693,7 @@ function serverTime_() { return new Date(Date.now() - 30000).toISOString(); }
 function integrations_(me) {
   var cfg = slackCfg_();
   var out = { slack: cfg ? (cfg.token ? 'bot' : 'webhook') : '', drive: true, driveRootUrl: '', sheetUrl: '' };
+  out.feedback = { email: !!PROPS.getProperty('FEEDBACK_EMAIL'), slack: !!cfg, github: !!(PROPS.getProperty('GITHUB_TOKEN') && PROPS.getProperty('GITHUB_REPO')) };
   var folderId = PROPS.getProperty('DRIVE_FOLDER_ID');
   if (folderId) out.driveRootUrl = 'https://drive.google.com/drive/folders/' + folderId;
   if (me && me.role === 'exec') out.sheetUrl = 'https://docs.google.com/spreadsheets/d/' + PROPS.getProperty('SPREADSHEET_ID') + '/edit';

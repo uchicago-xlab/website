@@ -418,7 +418,8 @@
     var t = C.task(st(), el.dataset.id);
     var items = [
       { label: 'Duplicate task', icon: 'copy', fn: function () { duplicate(t); } },
-      { label: 'Copy link', icon: 'link', fn: function () { A.copyLink(el); } }
+      { label: 'Copy link', icon: 'link', fn: function () { A.copyLink(el); } },
+      { label: 'Report a problem with this page', icon: 'help', fn: function () { App.openFeedback('bug'); } }
     ];
     if (C.canDeleteTask(st(), App.S.meId, t)) {
       items.push('sep', {
@@ -854,6 +855,7 @@
           var q = input.value.trim().toLowerCase();
           results = [];
           results.push({ label: 'Create a new task' + (q ? ': “' + input.value.trim() + '”' : ''), icon: 'plus', fn: function () { App.openNewTask({ title: input.value.trim() }); } });
+          if (!q || 'feedback bug report idea suggestion'.indexOf(q) !== -1 || q.indexOf('feedback') === 0 || q.indexOf('bug') === 0) results.push({ label: 'Send feedback (bug or idea)', sub: 'Command', icon: 'help', fn: function () { App.openFeedback(); } });
           pages.forEach(function (p) { if (!q || p[0].toLowerCase().indexOf(q) !== -1) results.push({ label: p[0], sub: 'Page', icon: p[2], fn: function () { App.go(p[1]); } }); });
           App.views.liveTeams().forEach(function (t) { if (!q || t.name.toLowerCase().indexOf(q) !== -1) results.push({ label: t.name, sub: 'Team', html: '<span class="team-dot" style="background:' + esc(t.color) + '"></span>', fn: function () { App.go('#/team/' + t.id); } }); });
           if (q) {
