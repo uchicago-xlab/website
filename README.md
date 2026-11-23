@@ -17,6 +17,8 @@ merging to `main` deploys it. Preview: https://uchicago-xlab.github.io/website/
 | `images/people/` | Team, faculty, and program headshots. |
 | `images/fellows/` | Headshots for the Past Fellows' Work page. |
 | `files/` | PDFs linked from the site. Older cohorts keep the paths they had on the old xrisk.uchicago.edu site so existing links keep working; new cohorts go in `files/<year>/`. |
+| `tracker/` | Internal task tracker for the AI Safety group's teams (not linked from the site). See [`tracker/README.md`](tracker/README.md). |
+| `scripts/build-tracker.py` | Builds the tracker's Google Apps Script bundle in `tracker/apps-script/`. |
 
 ## Editing notes
 
