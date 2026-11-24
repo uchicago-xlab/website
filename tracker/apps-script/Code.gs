@@ -46,8 +46,7 @@ var MAX_CELL = 49000; // Google Sheets allows 50,000 characters per cell
 function doGet() {
   return HtmlService.createHtmlOutputFromFile('Index')
     .setTitle('AI Safety Tracker')
-    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
-    .setFaviconUrl('https://www.google.com/s2/favicons?domain=uchicago.edu&sz=64');
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
 
 /** First call from the browser: who is this, and everything they can see. */
